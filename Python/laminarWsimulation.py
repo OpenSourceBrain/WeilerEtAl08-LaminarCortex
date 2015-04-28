@@ -33,41 +33,38 @@ def laminarWsimulation(gain = 1, W = None, inputvector = None, iterations = 10):
 
     if W == None or inputvector == None:
         W = getW('mouse somatic M1');
-        inputvector = numpy.zeros((iterations,len(W[0])))
+        inputvector = numpy.zeros((len(W[0]),iterations+1))
         inputvector[0][0] = 1 # modify to change laminar input pattern
  
-    print(W)
-    print(inputvector)
-    print(inputvector.shape)
-    print(inputvector[0])
-    print(inputvector[0].shape)
-    print 333
-    print (inputvector[0] * W)[0]
-    print 222
     
-    for I in range(iterations-2):
+    for I in range(iterations):
         print("Computing step %i..."%I)
-        print inputvector[I]
-        print inputvector[I] * W
-        print (inputvector[I] * W)[:,0]
-        print 0
-        inputvector[I+1] = (inputvector[I] * W)[:,0] * gain
         
-        print(inputvector)
+        for J in range(len(W[0])):
+            next = 0 
+            for K in range(len(W[0])):
+                next += (inputvector[K][I] * W[K][J]) * gain
+            
+            inputvector[J][I+1] = next 
+            
+        
+        
 
-
+    '''
     pylab.figure()
     pylab.xlabel('Pre?')
     pylab.ylabel('Post?')
     pylab.title('Connectivity matrix')
     pylab.imshow(W, interpolation='none')
-    
+    pylab.colorbar()
+    '''
     pylab.figure()
     pylab.xlabel('Iteration (number)')
     pylab.ylabel('Laminar level (cortical depth)')
-    pylab.title('Simulated flow of network activity (Not yet correct!!)')
+    pylab.title('Simulated flow of network activity')
     pylab.imshow(inputvector, interpolation='none')
-
+    pylab.colorbar()
+    
     pylab.show()
 
 def getW(datasetname):
