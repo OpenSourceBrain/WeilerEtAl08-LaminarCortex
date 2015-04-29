@@ -1,0 +1,162 @@
+<Lems>
+    
+    <!-- 
+
+        This LEMS file has been automatically generated using PyNeuroML v0.0.5
+
+     -->
+    
+    <!-- Specify which component to run -->
+    <Target component="Sim_CortexDemo"/>
+
+    <!-- Include core NeuroML2 ComponentType definitions -->
+    <Include file="Cells.xml"/>
+    <Include file="Networks.xml"/>
+    <Include file="Simulation.xml"/>
+    
+    <Include file="SimpleIaF.cell.nml"/>
+    <Include file="SimpleIaF.cell.nml"/>
+    <Include file="CortexDemo.net.nml"/>
+    <Include file="SimpleIaF.cell.nml"/>
+    <Include file="SimpleIaF.cell.nml"/>
+    <Include file="AMPAR.synapse.nml"/>
+    <Include file="GABAA.synapse.nml"/>
+    <Include file="AMPAR.synapse.nml"/>
+   
+    <Simulation id="Sim_CortexDemo" length="500ms" step="0.05ms" target="CortexDemo">
+        
+        <Display id="display_exc" title="Voltages Exc cells" timeScale="1ms" xmin="-50.0" xmax="550.0" ymin="-95" ymax="-38">
+            <Line id="Exc 0: Vm" quantity="Exc/0/SimpleIaF/v" scale="1mV" color="#963572" timeScale="1ms"/>
+            <Line id="Exc 1: Vm" quantity="Exc/1/SimpleIaF/v" scale="1mV" color="#5de679" timeScale="1ms"/>
+            <Line id="Exc 2: Vm" quantity="Exc/2/SimpleIaF/v" scale="1mV" color="#bcca04" timeScale="1ms"/>
+            <Line id="Exc 3: Vm" quantity="Exc/3/SimpleIaF/v" scale="1mV" color="#c89927" timeScale="1ms"/>
+            <Line id="Exc 4: Vm" quantity="Exc/4/SimpleIaF/v" scale="1mV" color="#05f3aa" timeScale="1ms"/>
+            <Line id="Exc 5: Vm" quantity="Exc/5/SimpleIaF/v" scale="1mV" color="#42f9dc" timeScale="1ms"/>
+            <Line id="Exc 6: Vm" quantity="Exc/6/SimpleIaF/v" scale="1mV" color="#c57470" timeScale="1ms"/>
+            <Line id="Exc 7: Vm" quantity="Exc/7/SimpleIaF/v" scale="1mV" color="#0b970d" timeScale="1ms"/>
+            <Line id="Exc 8: Vm" quantity="Exc/8/SimpleIaF/v" scale="1mV" color="#942eb3" timeScale="1ms"/>
+            <Line id="Exc 9: Vm" quantity="Exc/9/SimpleIaF/v" scale="1mV" color="#e7a382" timeScale="1ms"/>
+            <Line id="Exc 10: Vm" quantity="Exc/10/SimpleIaF/v" scale="1mV" color="#c72c26" timeScale="1ms"/>
+            <Line id="Exc 11: Vm" quantity="Exc/11/SimpleIaF/v" scale="1mV" color="#8d3c12" timeScale="1ms"/>
+            <Line id="Exc 12: Vm" quantity="Exc/12/SimpleIaF/v" scale="1mV" color="#96d70b" timeScale="1ms"/>
+            <Line id="Exc 13: Vm" quantity="Exc/13/SimpleIaF/v" scale="1mV" color="#78bd73" timeScale="1ms"/>
+            <Line id="Exc 14: Vm" quantity="Exc/14/SimpleIaF/v" scale="1mV" color="#040d19" timeScale="1ms"/>
+            <Line id="Exc 15: Vm" quantity="Exc/15/SimpleIaF/v" scale="1mV" color="#97df4c" timeScale="1ms"/>
+            <Line id="Exc 16: Vm" quantity="Exc/16/SimpleIaF/v" scale="1mV" color="#1d0e64" timeScale="1ms"/>
+            <Line id="Exc 17: Vm" quantity="Exc/17/SimpleIaF/v" scale="1mV" color="#c23a98" timeScale="1ms"/>
+            <Line id="Exc 18: Vm" quantity="Exc/18/SimpleIaF/v" scale="1mV" color="#e93759" timeScale="1ms"/>
+            <Line id="Exc 19: Vm" quantity="Exc/19/SimpleIaF/v" scale="1mV" color="#df114d" timeScale="1ms"/>
+            <Line id="Exc 20: Vm" quantity="Exc/20/SimpleIaF/v" scale="1mV" color="#e645fc" timeScale="1ms"/>
+            <Line id="Exc 21: Vm" quantity="Exc/21/SimpleIaF/v" scale="1mV" color="#4595fe" timeScale="1ms"/>
+            <Line id="Exc 22: Vm" quantity="Exc/22/SimpleIaF/v" scale="1mV" color="#a2adb8" timeScale="1ms"/>
+            <Line id="Exc 23: Vm" quantity="Exc/23/SimpleIaF/v" scale="1mV" color="#a2a206" timeScale="1ms"/>
+            <Line id="Exc 24: Vm" quantity="Exc/24/SimpleIaF/v" scale="1mV" color="#b2371c" timeScale="1ms"/>
+            <Line id="Exc 25: Vm" quantity="Exc/25/SimpleIaF/v" scale="1mV" color="#056179" timeScale="1ms"/>
+            <Line id="Exc 26: Vm" quantity="Exc/26/SimpleIaF/v" scale="1mV" color="#072104" timeScale="1ms"/>
+            <Line id="Exc 27: Vm" quantity="Exc/27/SimpleIaF/v" scale="1mV" color="#370380" timeScale="1ms"/>
+            <Line id="Exc 28: Vm" quantity="Exc/28/SimpleIaF/v" scale="1mV" color="#4f12f6" timeScale="1ms"/>
+            <Line id="Exc 29: Vm" quantity="Exc/29/SimpleIaF/v" scale="1mV" color="#855fec" timeScale="1ms"/>
+            <Line id="Exc 30: Vm" quantity="Exc/30/SimpleIaF/v" scale="1mV" color="#6a2410" timeScale="1ms"/>
+            <Line id="Exc 31: Vm" quantity="Exc/31/SimpleIaF/v" scale="1mV" color="#2744b0" timeScale="1ms"/>
+            <Line id="Exc 32: Vm" quantity="Exc/32/SimpleIaF/v" scale="1mV" color="#faac7b" timeScale="1ms"/>
+            <Line id="Exc 33: Vm" quantity="Exc/33/SimpleIaF/v" scale="1mV" color="#228929" timeScale="1ms"/>
+            <Line id="Exc 34: Vm" quantity="Exc/34/SimpleIaF/v" scale="1mV" color="#62110e" timeScale="1ms"/>
+            <Line id="Exc 35: Vm" quantity="Exc/35/SimpleIaF/v" scale="1mV" color="#6dce63" timeScale="1ms"/>
+            <Line id="Exc 36: Vm" quantity="Exc/36/SimpleIaF/v" scale="1mV" color="#3fd13c" timeScale="1ms"/>
+            <Line id="Exc 37: Vm" quantity="Exc/37/SimpleIaF/v" scale="1mV" color="#69ce11" timeScale="1ms"/>
+            <Line id="Exc 38: Vm" quantity="Exc/38/SimpleIaF/v" scale="1mV" color="#8de24e" timeScale="1ms"/>
+            <Line id="Exc 39: Vm" quantity="Exc/39/SimpleIaF/v" scale="1mV" color="#be7937" timeScale="1ms"/>
+        </Display>
+        
+        <Display id="display_inh" title="Voltages Inh cells" timeScale="1ms" xmin="-50.0" xmax="550.0" ymin="-95" ymax="-38">
+            <Line id="Inh 0: Vm" quantity="Inh/0/SimpleIaF/v" scale="1mV" color="#deea59" timeScale="1ms"/>
+            <Line id="Inh 1: Vm" quantity="Inh/1/SimpleIaF/v" scale="1mV" color="#21e668" timeScale="1ms"/>
+            <Line id="Inh 2: Vm" quantity="Inh/2/SimpleIaF/v" scale="1mV" color="#35f040" timeScale="1ms"/>
+            <Line id="Inh 3: Vm" quantity="Inh/3/SimpleIaF/v" scale="1mV" color="#422fc8" timeScale="1ms"/>
+            <Line id="Inh 4: Vm" quantity="Inh/4/SimpleIaF/v" scale="1mV" color="#a35fd8" timeScale="1ms"/>
+            <Line id="Inh 5: Vm" quantity="Inh/5/SimpleIaF/v" scale="1mV" color="#ba5585" timeScale="1ms"/>
+            <Line id="Inh 6: Vm" quantity="Inh/6/SimpleIaF/v" scale="1mV" color="#c23216" timeScale="1ms"/>
+            <Line id="Inh 7: Vm" quantity="Inh/7/SimpleIaF/v" scale="1mV" color="#0c5809" timeScale="1ms"/>
+            <Line id="Inh 8: Vm" quantity="Inh/8/SimpleIaF/v" scale="1mV" color="#92fb97" timeScale="1ms"/>
+            <Line id="Inh 9: Vm" quantity="Inh/9/SimpleIaF/v" scale="1mV" color="#ca44ce" timeScale="1ms"/>
+            <Line id="Inh 10: Vm" quantity="Inh/10/SimpleIaF/v" scale="1mV" color="#6529a2" timeScale="1ms"/>
+            <Line id="Inh 11: Vm" quantity="Inh/11/SimpleIaF/v" scale="1mV" color="#438feb" timeScale="1ms"/>
+            <Line id="Inh 12: Vm" quantity="Inh/12/SimpleIaF/v" scale="1mV" color="#fbb267" timeScale="1ms"/>
+            <Line id="Inh 13: Vm" quantity="Inh/13/SimpleIaF/v" scale="1mV" color="#447fbc" timeScale="1ms"/>
+            <Line id="Inh 14: Vm" quantity="Inh/14/SimpleIaF/v" scale="1mV" color="#4c388b" timeScale="1ms"/>
+            <Line id="Inh 15: Vm" quantity="Inh/15/SimpleIaF/v" scale="1mV" color="#41dc01" timeScale="1ms"/>
+            <Line id="Inh 16: Vm" quantity="Inh/16/SimpleIaF/v" scale="1mV" color="#a23213" timeScale="1ms"/>
+            <Line id="Inh 17: Vm" quantity="Inh/17/SimpleIaF/v" scale="1mV" color="#025f49" timeScale="1ms"/>
+            <Line id="Inh 18: Vm" quantity="Inh/18/SimpleIaF/v" scale="1mV" color="#84ecff" timeScale="1ms"/>
+            <Line id="Inh 19: Vm" quantity="Inh/19/SimpleIaF/v" scale="1mV" color="#d5406a" timeScale="1ms"/>
+        </Display>
+        
+        <OutputFile id="Volts_file_exc" fileName="v_exc.dat">
+            <OutputColumn id="v_0" quantity="Exc/0/SimpleIaF/v"/> 
+            <OutputColumn id="v_1" quantity="Exc/1/SimpleIaF/v"/> 
+            <OutputColumn id="v_2" quantity="Exc/2/SimpleIaF/v"/> 
+            <OutputColumn id="v_3" quantity="Exc/3/SimpleIaF/v"/> 
+            <OutputColumn id="v_4" quantity="Exc/4/SimpleIaF/v"/> 
+            <OutputColumn id="v_5" quantity="Exc/5/SimpleIaF/v"/> 
+            <OutputColumn id="v_6" quantity="Exc/6/SimpleIaF/v"/> 
+            <OutputColumn id="v_7" quantity="Exc/7/SimpleIaF/v"/> 
+            <OutputColumn id="v_8" quantity="Exc/8/SimpleIaF/v"/> 
+            <OutputColumn id="v_9" quantity="Exc/9/SimpleIaF/v"/> 
+            <OutputColumn id="v_10" quantity="Exc/10/SimpleIaF/v"/> 
+            <OutputColumn id="v_11" quantity="Exc/11/SimpleIaF/v"/> 
+            <OutputColumn id="v_12" quantity="Exc/12/SimpleIaF/v"/> 
+            <OutputColumn id="v_13" quantity="Exc/13/SimpleIaF/v"/> 
+            <OutputColumn id="v_14" quantity="Exc/14/SimpleIaF/v"/> 
+            <OutputColumn id="v_15" quantity="Exc/15/SimpleIaF/v"/> 
+            <OutputColumn id="v_16" quantity="Exc/16/SimpleIaF/v"/> 
+            <OutputColumn id="v_17" quantity="Exc/17/SimpleIaF/v"/> 
+            <OutputColumn id="v_18" quantity="Exc/18/SimpleIaF/v"/> 
+            <OutputColumn id="v_19" quantity="Exc/19/SimpleIaF/v"/> 
+            <OutputColumn id="v_20" quantity="Exc/20/SimpleIaF/v"/> 
+            <OutputColumn id="v_21" quantity="Exc/21/SimpleIaF/v"/> 
+            <OutputColumn id="v_22" quantity="Exc/22/SimpleIaF/v"/> 
+            <OutputColumn id="v_23" quantity="Exc/23/SimpleIaF/v"/> 
+            <OutputColumn id="v_24" quantity="Exc/24/SimpleIaF/v"/> 
+            <OutputColumn id="v_25" quantity="Exc/25/SimpleIaF/v"/> 
+            <OutputColumn id="v_26" quantity="Exc/26/SimpleIaF/v"/> 
+            <OutputColumn id="v_27" quantity="Exc/27/SimpleIaF/v"/> 
+            <OutputColumn id="v_28" quantity="Exc/28/SimpleIaF/v"/> 
+            <OutputColumn id="v_29" quantity="Exc/29/SimpleIaF/v"/> 
+            <OutputColumn id="v_30" quantity="Exc/30/SimpleIaF/v"/> 
+            <OutputColumn id="v_31" quantity="Exc/31/SimpleIaF/v"/> 
+            <OutputColumn id="v_32" quantity="Exc/32/SimpleIaF/v"/> 
+            <OutputColumn id="v_33" quantity="Exc/33/SimpleIaF/v"/> 
+            <OutputColumn id="v_34" quantity="Exc/34/SimpleIaF/v"/> 
+            <OutputColumn id="v_35" quantity="Exc/35/SimpleIaF/v"/> 
+            <OutputColumn id="v_36" quantity="Exc/36/SimpleIaF/v"/> 
+            <OutputColumn id="v_37" quantity="Exc/37/SimpleIaF/v"/> 
+            <OutputColumn id="v_38" quantity="Exc/38/SimpleIaF/v"/> 
+            <OutputColumn id="v_39" quantity="Exc/39/SimpleIaF/v"/> 
+        </OutputFile>
+        
+        <OutputFile id="Volts_file_inh" fileName="v_inh.dat">
+            <OutputColumn id="v_0" quantity="Inh/0/SimpleIaF/v"/> 
+            <OutputColumn id="v_1" quantity="Inh/1/SimpleIaF/v"/> 
+            <OutputColumn id="v_2" quantity="Inh/2/SimpleIaF/v"/> 
+            <OutputColumn id="v_3" quantity="Inh/3/SimpleIaF/v"/> 
+            <OutputColumn id="v_4" quantity="Inh/4/SimpleIaF/v"/> 
+            <OutputColumn id="v_5" quantity="Inh/5/SimpleIaF/v"/> 
+            <OutputColumn id="v_6" quantity="Inh/6/SimpleIaF/v"/> 
+            <OutputColumn id="v_7" quantity="Inh/7/SimpleIaF/v"/> 
+            <OutputColumn id="v_8" quantity="Inh/8/SimpleIaF/v"/> 
+            <OutputColumn id="v_9" quantity="Inh/9/SimpleIaF/v"/> 
+            <OutputColumn id="v_10" quantity="Inh/10/SimpleIaF/v"/> 
+            <OutputColumn id="v_11" quantity="Inh/11/SimpleIaF/v"/> 
+            <OutputColumn id="v_12" quantity="Inh/12/SimpleIaF/v"/> 
+            <OutputColumn id="v_13" quantity="Inh/13/SimpleIaF/v"/> 
+            <OutputColumn id="v_14" quantity="Inh/14/SimpleIaF/v"/> 
+            <OutputColumn id="v_15" quantity="Inh/15/SimpleIaF/v"/> 
+            <OutputColumn id="v_16" quantity="Inh/16/SimpleIaF/v"/> 
+            <OutputColumn id="v_17" quantity="Inh/17/SimpleIaF/v"/> 
+            <OutputColumn id="v_18" quantity="Inh/18/SimpleIaF/v"/> 
+            <OutputColumn id="v_19" quantity="Inh/19/SimpleIaF/v"/> 
+        </OutputFile>
+        
+    </Simulation>
+
+</Lems>
