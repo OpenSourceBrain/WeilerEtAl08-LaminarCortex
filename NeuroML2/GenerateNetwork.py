@@ -232,13 +232,13 @@ def generate_example_network(network_id,
 
         # Specify Displays and Output Files
         disp_exc = "display_exc"
-        ls.create_display(disp_exc, "Voltages Exc cells", "-80", "-50")
+        ls.create_display(disp_exc, "Voltages Exc cells", "-80", "50")
 
         of_exc = 'Volts_file_exc'
         ls.create_output_file(of_exc, "v_exc.dat")
         
         disp_inh = "display_inh"
-        ls.create_display(disp_inh, "Voltages Inh cells", "-80", "-50")
+        ls.create_display(disp_inh, "Voltages Inh cells", "-80", "50")
 
         of_inh = 'Volts_file_inh'
         ls.create_output_file(of_inh, "v_inh.dat")
@@ -263,20 +263,22 @@ def generate_example_network(network_id,
 if __name__ == "__main__":
     
     
-    generate_example_network("CortexDemo",
+    generate_example_network("CortexDemoHH",
                                 numCells_exc = 40,
                                 numCells_inh = 20,
+                                exc_group_component = "HHCell",
+                                inh_group_component = "HHCell",
                                 x_size = 100,
                                 y_size = 50, 
                                 z_size = 100,
                                 connections = True,
                                 connection_probability_exc_exc =   0.3,
-                                connection_probability_inh_exc =   0.8,
-                                connection_probability_exc_inh =   0.4,
-                                connection_probability_inh_inh =   0.2,
+                                connection_probability_inh_exc =   0.5,
+                                connection_probability_exc_inh =   0.5,
+                                connection_probability_inh_inh =   0.5,
                                 inputs = True,
                                 input_firing_rate = 70, # Hz
-                                num_inputs_per_exc = 5,
+                                num_inputs_per_exc = 2,
                                 generate_lems_simulation = True,
                                 duration = 300 )
                                 
