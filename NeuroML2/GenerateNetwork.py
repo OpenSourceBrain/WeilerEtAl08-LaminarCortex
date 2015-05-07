@@ -141,11 +141,9 @@ def generate_example_network(network_id,
         mf_input_syn = "AMPAR"
         nml_doc.includes.append(IncludeType(href='%s.synapse.nml'%mf_input_syn))
         
-        rand_spiker_id = "input50Hz"
+        rand_spiker_id = "input_%sHz"%input_firing_rate
         
-        
-        #<poissonFiringSynapse id="Input_8" averageRate="50.0 per_s" synapse="MFSpikeSyn" spikeTarget="./MFSpikeSyn"/>
-        pfs = PoissonFiringSynapse(id="input50Hz",
+        pfs = PoissonFiringSynapse(id=rand_spiker_id,
                                    average_rate="%s per_s"%input_firing_rate,
                                    synapse=mf_input_syn,
                                    spike_target="./%s"%mf_input_syn)
@@ -202,13 +200,13 @@ def generate_example_network(network_id,
 
         # Specify Displays and Output Files
         disp_exc = "display_exc"
-        ls.create_display(disp_exc, "Voltages Exc cells", "-95", "-38")
+        ls.create_display(disp_exc, "Voltages Exc cells", "-80", "-50")
 
         of_exc = 'Volts_file_exc'
         ls.create_output_file(of_exc, "v_exc.dat")
         
         disp_inh = "display_inh"
-        ls.create_display(disp_inh, "Voltages Inh cells", "-95", "-38")
+        ls.create_display(disp_inh, "Voltages Inh cells", "-80", "-50")
 
         of_inh = 'Volts_file_inh'
         ls.create_output_file(of_inh, "v_inh.dat")
@@ -236,16 +234,17 @@ if __name__ == "__main__":
     generate_example_network("CortexDemo",
                                 numCells_exc = 40,
                                 numCells_inh = 20,
-                                x_size = 1000,
-                                y_size = 100, 
-                                z_size = 1000,
+                                x_size = 200,
+                                y_size = 200, 
+                                z_size = 200,
                                 connections = True,
-                                connection_probability_exc_inh =   0.5,
-                                connection_probability_inh_exc =   0.5,
+                                connection_probability_exc_inh =   0.4,
+                                connection_probability_inh_exc =   0.4,
                                 inputs = True,
                                 input_firing_rate = 80, # Hz
                                 num_inputs_per_exc = 5,
-                                generate_lems_simulation = True)
+                                generate_lems_simulation = True,
+                                duration = 300 )
                                 
 
 
