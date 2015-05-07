@@ -1,0 +1,338 @@
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2beta4.xsd" id="LayeredCortexDemo">
+    <include href="HHCell.cell.nml"></include>
+    <include href="AMPAR.synapse.nml"></include>
+    <include href="GABAA.synapse.nml"></include>
+    <network id="LayeredCortexDemo" type="networkWithTemperature" temperature="32.0 degC">
+        <notes>Network generated using libNeuroML v0.2.6</notes>
+        <population id="Exc_0" component="HHCell" type="populationList" size="10">
+            <instance id="0">
+                <location y="44.073259917500003" x="483.226767845999973" z="3.74573502929"/>
+            </instance>
+            <instance id="1">
+                <location y="93.926899736400003" x="455.487981224999999" z="291.113786528999981"/>
+            </instance>
+            <instance id="2">
+                <location y="8.393822683710001" x="335.78174074399999" z="383.240466395999988"/>
+            </instance>
+            <instance id="3">
+                <location y="3.08140217266" x="118.404887681999995" z="394.386358617999974"/>
+            </instance>
+            <instance id="4">
+                <location y="62.328147503899999" x="173.044482799000008" z="307.907847552000021"/>
+            </instance>
+            <instance id="5">
+                <location y="18.309064741" x="74.277319354100001" z="57.2064848443"/>
+            </instance>
+            <instance id="6">
+                <location y="48.675154060499999" x="7.30939024345" z="482.450780457999997"/>
+            </instance>
+            <instance id="7">
+                <location y="54.108818555100001" x="32.281140488600002" z="232.949279504000003"/>
+            </instance>
+            <instance id="8">
+                <location y="8.89288299907" x="300.731724781000025" z="289.501343093999992"/>
+            </instance>
+            <instance id="9">
+                <location y="55.643256055599998" x="134.792751909999993" z="322.317117089000021"/>
+            </instance>
+        </population>
+        <population id="Inh_0" component="HHCell" type="populationList" size="0"/>
+        <population id="Exc_1" component="HHCell" type="populationList" size="10">
+            <instance id="0">
+                <location y="135.523914743999995" x="240.518185683000013" z="124.576060681000001"/>
+            </instance>
+            <instance id="1">
+                <location y="145.338801947999997" x="466.757749020999995" z="265.080603456000006"/>
+            </instance>
+            <instance id="2">
+                <location y="150.810192577999999" x="9.64978315486" z="2.89011870887"/>
+            </instance>
+            <instance id="3">
+                <location y="147.282692534999995" x="71.884213797800001" z="188.673720386000014"/>
+            </instance>
+            <instance id="4">
+                <location y="158.752850813000009" x="27.087599323100001" z="82.001611870999994"/>
+            </instance>
+            <instance id="5">
+                <location y="114.424572159999997" x="278.665118720999999" z="468.653542347999974"/>
+            </instance>
+            <instance id="6">
+                <location y="195.693312235000008" x="385.489985760000025" z="70.613882208199996"/>
+            </instance>
+            <instance id="7">
+                <location y="103.958962423000003" x="152.696354143999997" z="138.391847396000003"/>
+            </instance>
+            <instance id="8">
+                <location y="117.734303527999998" x="403.256252558000028" z="77.285257355400006"/>
+            </instance>
+            <instance id="9">
+                <location y="115.455140009000004" x="477.359327850999989" z="416.944647076000024"/>
+            </instance>
+        </population>
+        <population id="Inh_1" component="HHCell" type="populationList" size="0"/>
+        <population id="Exc_2" component="HHCell" type="populationList" size="10">
+            <instance id="0">
+                <location y="238.618352834000007" x="20.5314031359" z="174.796150982"/>
+            </instance>
+            <instance id="1">
+                <location y="281.646305670999993" x="170.853896375000005" z="237.967454065999988"/>
+            </instance>
+            <instance id="2">
+                <location y="247.084012531000013" x="391.445144760999995" z="408.672003428999972"/>
+            </instance>
+            <instance id="3">
+                <location y="243.959639767999988" x="440.783799327999986" z="390.531798895999998"/>
+            </instance>
+            <instance id="4">
+                <location y="229.567891564000007" x="407.370580129000018" z="61.938337153500001"/>
+            </instance>
+            <instance id="5">
+                <location y="243.605979359999992" x="92.810930372499996" z="59.733703505599998"/>
+            </instance>
+            <instance id="6">
+                <location y="282.942116141999975" x="264.899570879000009" z="242.600576493000005"/>
+            </instance>
+            <instance id="7">
+                <location y="265.639162253999984" x="408.867000851" z="320.521515576000013"/>
+            </instance>
+            <instance id="8">
+                <location y="270.265894904999982" x="172.674462602000006" z="404.970291866000025"/>
+            </instance>
+            <instance id="9">
+                <location y="290.799061912000013" x="78.584792391999997" z="134.665183617999986"/>
+            </instance>
+        </population>
+        <population id="Inh_2" component="HHCell" type="populationList" size="0"/>
+        <population id="Exc_3" component="HHCell" type="populationList" size="10">
+            <instance id="0">
+                <location y="384.047916519000012" x="77.423247873500003" z="360.063989920999973"/>
+            </instance>
+            <instance id="1">
+                <location y="344.667066426000019" x="396.781197887000019" z="35.386942619400003"/>
+            </instance>
+            <instance id="2">
+                <location y="304.773529540000027" x="197.621525131999988" z="143.066751970000013"/>
+            </instance>
+            <instance id="3">
+                <location y="350.671484194000016" x="18.997297508199999" z="43.833899471099997"/>
+            </instance>
+            <instance id="4">
+                <location y="369.938728957000023" x="466.412823419999995" z="158.493013327999989"/>
+            </instance>
+            <instance id="5">
+                <location y="306.622760433999986" x="472.525535004999995" z="128.714445444000006"/>
+            </instance>
+            <instance id="6">
+                <location y="342.63042580299998" x="36.499823215699998" z="100.948386271999993"/>
+            </instance>
+            <instance id="7">
+                <location y="370.485991155000022" x="198.323317596999999" z="443.676670863000027"/>
+            </instance>
+            <instance id="8">
+                <location y="381.853154895999978" x="250.258897380000008" z="180.627256375000002"/>
+            </instance>
+            <instance id="9">
+                <location y="351.503417559000013" x="429.343086500000027" z="351.207738448999976"/>
+            </instance>
+        </population>
+        <population id="Inh_3" component="HHCell" type="populationList" size="0"/>
+        <population id="Exc_4" component="HHCell" type="populationList" size="10">
+            <instance id="0">
+                <location y="458.451181056999985" x="87.344959201500004" z="150.888528900000011"/>
+            </instance>
+            <instance id="1">
+                <location y="453.434074784000018" x="406.425697178999997" z="249.793652097000006"/>
+            </instance>
+            <instance id="2">
+                <location y="454.903067254999996" x="386.662602241999991" z="166.879006247000007"/>
+            </instance>
+            <instance id="3">
+                <location y="462.450599048000015" x="65.466430217300001" z="462.673109565000004"/>
+            </instance>
+            <instance id="4">
+                <location y="406.974978532000023" x="421.169428326000002" z="162.642602514999993"/>
+            </instance>
+            <instance id="5">
+                <location y="467.469719843000007" x="0.853187099993" z="319.140058337000028"/>
+            </instance>
+            <instance id="6">
+                <location y="414.827392932000009" x="378.954387426999972" z="108.516846001000005"/>
+            </instance>
+            <instance id="7">
+                <location y="473.672485592999976" x="216.386189279999996" z="103.559501363999999"/>
+            </instance>
+            <instance id="8">
+                <location y="438.120108795000021" x="411.418462823000027" z="437.142889631000003"/>
+            </instance>
+            <instance id="9">
+                <location y="453.748772019" x="480.012332200999992" z="460.533679666000012"/>
+            </instance>
+        </population>
+        <population id="Inh_4" component="HHCell" type="populationList" size="0"/>
+        <population id="Exc_5" component="HHCell" type="populationList" size="10">
+            <instance id="0">
+                <location y="568.527009023999994" x="211.018433119999997" z="423.454423067999983"/>
+            </instance>
+            <instance id="1">
+                <location y="509.286882552999998" x="419.383892910999975" z="130.157881521000007"/>
+            </instance>
+            <instance id="2">
+                <location y="585.782435956999961" x="205.129010230999995" z="138.371264658000001"/>
+            </instance>
+            <instance id="3">
+                <location y="537.534845079999968" x="56.869457295799997" z="106.942911808999995"/>
+            </instance>
+            <instance id="4">
+                <location y="558.750951587000031" x="358.118317414999979" z="26.249477079199998"/>
+            </instance>
+            <instance id="5">
+                <location y="544.055508994999968" x="438.715189079000027" z="388.443520256999989"/>
+            </instance>
+            <instance id="6">
+                <location y="530.791716278999957" x="82.660352366200001" z="36.663146615800002"/>
+            </instance>
+            <instance id="7">
+                <location y="542.891036600999996" x="197.495361038999988" z="341.39814536099999"/>
+            </instance>
+            <instance id="8">
+                <location y="540.05118655299998" x="239.793927169" z="238.980990488999993"/>
+            </instance>
+            <instance id="9">
+                <location y="536.95254374700005" x="140.630202709000002" z="300.246873299000015"/>
+            </instance>
+        </population>
+        <population id="Inh_5" component="HHCell" type="populationList" size="0"/>
+        <population id="Exc_6" component="HHCell" type="populationList" size="10">
+            <instance id="0">
+                <location y="651.88643261499999" x="103.033990297000003" z="464.836342514000023"/>
+            </instance>
+            <instance id="1">
+                <location y="666.831051167000055" x="228.708728417000003" z="329.921595857999989"/>
+            </instance>
+            <instance id="2">
+                <location y="672.555037935999962" x="400.672584011000026" z="330.35351633800002"/>
+            </instance>
+            <instance id="3">
+                <location y="636.663375027000029" x="51.855411480800001" z="397.030195131000028"/>
+            </instance>
+            <instance id="4">
+                <location y="614.00176576399997" x="32.596368030000001" z="452.680084464999993"/>
+            </instance>
+            <instance id="5">
+                <location y="698.016876241999967" x="294.008733077999977" z="376.790131453000015"/>
+            </instance>
+            <instance id="6">
+                <location y="629.861949891999984" x="497.838975077999976" z="343.028256978999991"/>
+            </instance>
+            <instance id="7">
+                <location y="694.597010277999971" x="165.293371538999992" z="146.890664705999995"/>
+            </instance>
+            <instance id="8">
+                <location y="681.428436003000002" x="97.283164073400002" z="139.51732990299999"/>
+            </instance>
+            <instance id="9">
+                <location y="660.220371339000053" x="267.016830643999981" z="169.817121737999997"/>
+            </instance>
+        </population>
+        <population id="Inh_6" component="HHCell" type="populationList" size="0"/>
+        <population id="Exc_7" component="HHCell" type="populationList" size="10">
+            <instance id="0">
+                <location y="732.106118244999948" x="167.117431439000001" z="133.751899320000007"/>
+            </instance>
+            <instance id="1">
+                <location y="758.922973708999962" x="379.836173830000007" z="274.12252917699999"/>
+            </instance>
+            <instance id="2">
+                <location y="725.715060808999965" x="412.069258262000005" z="68.541652972199998"/>
+            </instance>
+            <instance id="3">
+                <location y="703.735395271000016" x="14.189535359100001" z="495.338112280000018"/>
+            </instance>
+            <instance id="4">
+                <location y="766.65997591200005" x="486.907345088999989" z="495.330211941000016"/>
+            </instance>
+            <instance id="5">
+                <location y="743.455539575999978" x="257.826251371000012" z="257.642116052999995"/>
+            </instance>
+            <instance id="6">
+                <location y="775.958079067999961" x="34.498422757" z="152.580761392999989"/>
+            </instance>
+            <instance id="7">
+                <location y="790.950269683999977" x="349.040223232000017" z="109.799546554000003"/>
+            </instance>
+            <instance id="8">
+                <location y="765.314180337000039" x="252.18813897199999" z="405.479162998999982"/>
+            </instance>
+            <instance id="9">
+                <location y="733.109137313000019" x="341.375710759000015" z="282.08991598199998"/>
+            </instance>
+        </population>
+        <population id="Inh_7" component="HHCell" type="populationList" size="0"/>
+        <population id="Exc_8" component="HHCell" type="populationList" size="10">
+            <instance id="0">
+                <location y="849.941602859999989" x="81.267146311600001" z="470.02403689800002"/>
+            </instance>
+            <instance id="1">
+                <location y="813.993868141000007" x="475.091349303000015" z="266.15689181800002"/>
+            </instance>
+            <instance id="2">
+                <location y="814.553190418999975" x="309.930905954000025" z="474.495481100999996"/>
+            </instance>
+            <instance id="3">
+                <location y="816.425010498000006" x="121.642867805999998" z="253.215814956999992"/>
+            </instance>
+            <instance id="4">
+                <location y="877.344837332999987" x="252.501803231999986" z="426.588657642999976"/>
+            </instance>
+            <instance id="5">
+                <location y="870.822730660000047" x="163.251583012999987" z="280.861208461999979"/>
+            </instance>
+            <instance id="6">
+                <location y="859.91991597699996" x="267.540613599999972" z="223.168879900000007"/>
+            </instance>
+            <instance id="7">
+                <location y="892.972318358000052" x="185.851864772999988" z="381.449527444000012"/>
+            </instance>
+            <instance id="8">
+                <location y="888.631109927000011" x="337.934760036" z="302.021125749000021"/>
+            </instance>
+            <instance id="9">
+                <location y="822.792301046000034" x="35.451029666399997" z="401.510142528000017"/>
+            </instance>
+        </population>
+        <population id="Inh_8" component="HHCell" type="populationList" size="0"/>
+        <population id="Exc_9" component="HHCell" type="populationList" size="10">
+            <instance id="0">
+                <location y="993.961984307999955" x="173.093162253000003" z="344.526148471999988"/>
+            </instance>
+            <instance id="1">
+                <location y="949.278592301000003" x="189.89337455399999" z="26.223782561099998"/>
+            </instance>
+            <instance id="2">
+                <location y="908.017791679999959" x="224.037821613000006" z="146.582023897999989"/>
+            </instance>
+            <instance id="3">
+                <location y="914.789399867000043" x="464.645755813999983" z="338.458674979000023"/>
+            </instance>
+            <instance id="4">
+                <location y="969.306772936000016" x="325.394456245000015" z="397.235039733000008"/>
+            </instance>
+            <instance id="5">
+                <location y="935.660869324000032" x="432.128070808000018" z="185.705778804000005"/>
+            </instance>
+            <instance id="6">
+                <location y="963.942448807999995" x="87.024715075900005" z="106.135360059999996"/>
+            </instance>
+            <instance id="7">
+                <location y="999.009231183999987" x="98.224758486900001" z="310.210837228999992"/>
+            </instance>
+            <instance id="8">
+                <location y="950.185558177999951" x="365.323521723999988" z="66.250211277099993"/>
+            </instance>
+            <instance id="9">
+                <location y="965.12464042199997" x="455.091048980999972" z="24.754658112200001"/>
+            </instance>
+        </population>
+        <population id="Inh_9" component="HHCell" type="populationList" size="0"/>
+    </network>
+</neuroml>
