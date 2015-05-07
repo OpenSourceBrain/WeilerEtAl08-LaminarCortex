@@ -24,6 +24,20 @@ from random import random
 from random import seed
 
 
+
+def add_connection(projection, id, pre_pop, pre_component, pre_cell_id, pre_seg_id, post_pop, post_component, post_cell_id, post_seg_id):
+
+    connection = Connection(id=id, \
+                            pre_cell_id="../%s/%i/%s"%(pre_pop, pre_cell_id, pre_component), \
+                            pre_segment_id=pre_seg_id, \
+                            pre_fraction_along=0.5,
+                            post_cell_id="../%s/%i/%s"%(post_pop, post_cell_id, post_component), \
+                            post_segment_id=post_seg_id,
+                            post_fraction_along=0.5)
+
+    projection.connections.append(connection)
+
+
 def generate_example_network(network_id,
                              numCells_exc,
                              numCells_inh,
@@ -36,8 +50,10 @@ def generate_example_network(network_id,
                              random_seed = 1234,
                              generate_lems_simulation = False,
                              connections = True,
-                             connection_probability_exc_inh =   0.02,
-                             connection_probability_inh_exc =   0.02,
+                             connection_probability_exc_exc =   0.4,
+                             connection_probability_inh_exc =   0.4,
+                             connection_probability_exc_inh =   0.4,
+                             connection_probability_inh_inh =   0.4,
                              inputs = False,
                              input_firing_rate = 50, # Hz
                              num_inputs_per_exc = 4,
@@ -56,9 +72,8 @@ def generate_example_network(network_id,
     net.notes = "Network generated using libNeuroML v%s"%__version__
     nml_doc.networks.append(net)
     
-
-    nml_doc.includes.append(IncludeType(href='%s.cell.nml'%exc_group_component))
-    nml_doc.includes.append(IncludeType(href='%s.cell.nml'%inh_group_component))
+    for cell_comp in set([exc_group_component, inh_group_component]): # removes duplicates
+        nml_doc.includes.append(IncludeType(href='%s.cell.nml'%cell_comp))
 
     # The names of the Exc & Inh groups/populations 
     exc_group = "Exc" 
@@ -67,10 +82,14 @@ def generate_example_network(network_id,
     # The names of the network connections 
     net_conn_exc_inh = "NetConn_Exc_Inh"
     net_conn_inh_exc = "NetConn_Inh_Exc"
+    net_conn_exc_exc = "NetConn_Exc_Exc"
+    net_conn_inh_inh = "NetConn_Inh_Inh"
 
     # The names of the synapse types (should match names at Cell Mechanism/Network tabs in neuroConstruct)
     exc_inh_syn = "AMPAR"
     inh_exc_syn = "GABAA"
+    exc_exc_syn = "AMPAR"
+    inh_inh_syn = "GABAA"
 
     for syn in [exc_inh_syn, inh_exc_syn]:
         nml_doc.includes.append(IncludeType(href='%s.synapse.nml'%syn))
@@ -99,47 +118,60 @@ def generate_example_network(network_id,
 
     if connections:
 
+        proj_exc_exc = Projection(id=net_conn_exc_exc, presynaptic_population=exc_group, postsynaptic_population=exc_group, synapse=exc_exc_syn)
+        net.projections.append(proj_exc_exc)
+        
         proj_exc_inh = Projection(id=net_conn_exc_inh, presynaptic_population=exc_group, postsynaptic_population=inh_group, synapse=exc_inh_syn)
         net.projections.append(proj_exc_inh)
+        
         proj_inh_exc = Projection(id=net_conn_inh_exc, presynaptic_population=inh_group, postsynaptic_population=exc_group, synapse=inh_exc_syn)
         net.projections.append(proj_inh_exc)
+        
+        proj_inh_inh = Projection(id=net_conn_inh_inh, presynaptic_population=inh_group, postsynaptic_population=inh_group, synapse=inh_inh_syn)
+        net.projections.append(proj_inh_inh)
 
         count_exc_inh = 0
         count_inh_exc = 0
-
-        # Generate exc -> *  connections
-
-
-        def add_connection(projection, id, pre_pop, pre_component, pre_cell_id, pre_seg_id, post_pop, post_component, post_cell_id, post_seg_id):
-
-            connection = Connection(id=id, \
-                                    pre_cell_id="../%s/%i/%s"%(pre_pop, pre_cell_id, pre_component), \
-                                    pre_segment_id=pre_seg_id, \
-                                    pre_fraction_along=0.5,
-                                    post_cell_id="../%s/%i/%s"%(post_pop, post_cell_id, post_component), \
-                                    post_segment_id=post_seg_id,
-                                    post_fraction_along=0.5)
-
-            projection.connections.append(connection)
+        count_exc_exc = 0
+        count_inh_inh = 0
 
 
         for i in range(0, numCells_exc):
             for j in range(0, numCells_inh):
                 if i != j:
                     if random()<connection_probability_exc_inh:
-
-                            add_connection(proj_exc_inh, count_exc_inh, exc_group, exc_group_component, i, 0, inh_group, inh_group_component, j, 0)
-                    count_exc_inh+=1
-
+                        add_connection(proj_exc_inh, count_exc_inh, exc_group, exc_group_component, i, 0, inh_group, inh_group_component, j, 0)
+                        count_exc_inh+=1
+                        
                     if random()<connection_probability_inh_exc:
 
-                            add_connection(proj_inh_exc, count_inh_exc, inh_group, inh_group_component, j, 0, exc_group, exc_group_component, i, 0)
-                    count_inh_exc+=1
+                        add_connection(proj_inh_exc, count_inh_exc, inh_group, inh_group_component, j, 0, exc_group, exc_group_component, i, 0)
+                        count_inh_exc+=1
+                        
+        for i in range(0, numCells_exc):
+            for j in range(0, numCells_exc):
+                if i != j:
+                        
+                    if random()<connection_probability_exc_exc:
+
+                        add_connection(proj_exc_exc, count_exc_exc, exc_group, exc_group_component, i, 0, exc_group, exc_group_component, j, 0)
+                        count_exc_exc+=1
+                    
+
+        for i in range(0, numCells_inh):
+            for j in range(0, numCells_inh):
+                if i != j:
+
+                    if random()<connection_probability_inh_inh:
+
+                        add_connection(proj_inh_inh, count_inh_inh, inh_group, inh_group_component, j, 0, inh_group, inh_group_component, i, 0)
+                        count_inh_inh+=1
 
     if inputs:
         
         mf_input_syn = "AMPAR"
-        nml_doc.includes.append(IncludeType(href='%s.synapse.nml'%mf_input_syn))
+        if mf_input_syn!=exc_inh_syn and mf_input_syn!=inh_exc_syn:
+            nml_doc.includes.append(IncludeType(href='%s.synapse.nml'%mf_input_syn))
         
         rand_spiker_id = "input_%sHz"%input_firing_rate
         
@@ -238,10 +270,12 @@ if __name__ == "__main__":
                                 y_size = 200, 
                                 z_size = 200,
                                 connections = True,
+                                connection_probability_exc_exc =   0.3,
+                                connection_probability_inh_exc =   0.8,
                                 connection_probability_exc_inh =   0.4,
-                                connection_probability_inh_exc =   0.4,
+                                connection_probability_inh_inh =   0.2,
                                 inputs = True,
-                                input_firing_rate = 80, # Hz
+                                input_firing_rate = 70, # Hz
                                 num_inputs_per_exc = 5,
                                 generate_lems_simulation = True,
                                 duration = 300 )
