@@ -24,69 +24,79 @@
     <Simulation id="Sim_CortexDemoHH" length="300ms" step="0.05ms" target="CortexDemoHH">
         
         <Display id="display_exc" title="Voltages Exc cells" timeScale="1ms" xmin="-30.0" xmax="330.0" ymin="-80" ymax="50">
-            <Line id="Exc 0: Vm" quantity="Exc/0/HHCell/v" scale="1mV" color="#13c69c" timeScale="1ms"/>
-            <Line id="Exc 1: Vm" quantity="Exc/1/HHCell/v" scale="1mV" color="#cfc969" timeScale="1ms"/>
-            <Line id="Exc 2: Vm" quantity="Exc/2/HHCell/v" scale="1mV" color="#71818a" timeScale="1ms"/>
-            <Line id="Exc 3: Vm" quantity="Exc/3/HHCell/v" scale="1mV" color="#ccd6ea" timeScale="1ms"/>
-            <Line id="Exc 4: Vm" quantity="Exc/4/HHCell/v" scale="1mV" color="#7b1a3b" timeScale="1ms"/>
-            <Line id="Exc 5: Vm" quantity="Exc/5/HHCell/v" scale="1mV" color="#ce1ff8" timeScale="1ms"/>
-            <Line id="Exc 6: Vm" quantity="Exc/6/HHCell/v" scale="1mV" color="#9a8dab" timeScale="1ms"/>
-            <Line id="Exc 7: Vm" quantity="Exc/7/HHCell/v" scale="1mV" color="#45d3a1" timeScale="1ms"/>
-            <Line id="Exc 8: Vm" quantity="Exc/8/HHCell/v" scale="1mV" color="#c3eeba" timeScale="1ms"/>
-            <Line id="Exc 9: Vm" quantity="Exc/9/HHCell/v" scale="1mV" color="#3785f0" timeScale="1ms"/>
-            <Line id="Exc 10: Vm" quantity="Exc/10/HHCell/v" scale="1mV" color="#b888d3" timeScale="1ms"/>
-            <Line id="Exc 11: Vm" quantity="Exc/11/HHCell/v" scale="1mV" color="#3225d3" timeScale="1ms"/>
-            <Line id="Exc 12: Vm" quantity="Exc/12/HHCell/v" scale="1mV" color="#74a74b" timeScale="1ms"/>
-            <Line id="Exc 13: Vm" quantity="Exc/13/HHCell/v" scale="1mV" color="#7f60d1" timeScale="1ms"/>
-            <Line id="Exc 14: Vm" quantity="Exc/14/HHCell/v" scale="1mV" color="#72669f" timeScale="1ms"/>
-            <Line id="Exc 15: Vm" quantity="Exc/15/HHCell/v" scale="1mV" color="#22d084" timeScale="1ms"/>
-            <Line id="Exc 16: Vm" quantity="Exc/16/HHCell/v" scale="1mV" color="#544fd8" timeScale="1ms"/>
-            <Line id="Exc 17: Vm" quantity="Exc/17/HHCell/v" scale="1mV" color="#a01e82" timeScale="1ms"/>
-            <Line id="Exc 18: Vm" quantity="Exc/18/HHCell/v" scale="1mV" color="#128652" timeScale="1ms"/>
-            <Line id="Exc 19: Vm" quantity="Exc/19/HHCell/v" scale="1mV" color="#1d92bc" timeScale="1ms"/>
-            <Line id="Exc 20: Vm" quantity="Exc/20/HHCell/v" scale="1mV" color="#332d1b" timeScale="1ms"/>
-            <Line id="Exc 21: Vm" quantity="Exc/21/HHCell/v" scale="1mV" color="#a20fa4" timeScale="1ms"/>
-            <Line id="Exc 22: Vm" quantity="Exc/22/HHCell/v" scale="1mV" color="#f40721" timeScale="1ms"/>
-            <Line id="Exc 23: Vm" quantity="Exc/23/HHCell/v" scale="1mV" color="#39e911" timeScale="1ms"/>
-            <Line id="Exc 24: Vm" quantity="Exc/24/HHCell/v" scale="1mV" color="#84a6f8" timeScale="1ms"/>
-            <Line id="Exc 25: Vm" quantity="Exc/25/HHCell/v" scale="1mV" color="#52c795" timeScale="1ms"/>
-            <Line id="Exc 26: Vm" quantity="Exc/26/HHCell/v" scale="1mV" color="#b5f25b" timeScale="1ms"/>
-            <Line id="Exc 27: Vm" quantity="Exc/27/HHCell/v" scale="1mV" color="#5189b8" timeScale="1ms"/>
-            <Line id="Exc 28: Vm" quantity="Exc/28/HHCell/v" scale="1mV" color="#c34b14" timeScale="1ms"/>
-            <Line id="Exc 29: Vm" quantity="Exc/29/HHCell/v" scale="1mV" color="#d6ecbf" timeScale="1ms"/>
-            <Line id="Exc 30: Vm" quantity="Exc/30/HHCell/v" scale="1mV" color="#37fcdd" timeScale="1ms"/>
-            <Line id="Exc 31: Vm" quantity="Exc/31/HHCell/v" scale="1mV" color="#54ddf0" timeScale="1ms"/>
-            <Line id="Exc 32: Vm" quantity="Exc/32/HHCell/v" scale="1mV" color="#df8e1b" timeScale="1ms"/>
-            <Line id="Exc 33: Vm" quantity="Exc/33/HHCell/v" scale="1mV" color="#f1e00f" timeScale="1ms"/>
-            <Line id="Exc 34: Vm" quantity="Exc/34/HHCell/v" scale="1mV" color="#8fb06c" timeScale="1ms"/>
-            <Line id="Exc 35: Vm" quantity="Exc/35/HHCell/v" scale="1mV" color="#7f1c4a" timeScale="1ms"/>
-            <Line id="Exc 36: Vm" quantity="Exc/36/HHCell/v" scale="1mV" color="#f49642" timeScale="1ms"/>
-            <Line id="Exc 37: Vm" quantity="Exc/37/HHCell/v" scale="1mV" color="#c9c637" timeScale="1ms"/>
-            <Line id="Exc 38: Vm" quantity="Exc/38/HHCell/v" scale="1mV" color="#27bf7a" timeScale="1ms"/>
-            <Line id="Exc 39: Vm" quantity="Exc/39/HHCell/v" scale="1mV" color="#92d7bb" timeScale="1ms"/>
+            <Line id="Exc 0: Vm" quantity="Exc/0/HHCell/v" scale="1mV" color="#8912c6" timeScale="1ms"/>
+            <Line id="Exc 1: Vm" quantity="Exc/1/HHCell/v" scale="1mV" color="#f1b401" timeScale="1ms"/>
+            <Line id="Exc 2: Vm" quantity="Exc/2/HHCell/v" scale="1mV" color="#ec9597" timeScale="1ms"/>
+            <Line id="Exc 3: Vm" quantity="Exc/3/HHCell/v" scale="1mV" color="#0358a1" timeScale="1ms"/>
+            <Line id="Exc 4: Vm" quantity="Exc/4/HHCell/v" scale="1mV" color="#888ea7" timeScale="1ms"/>
+            <Line id="Exc 5: Vm" quantity="Exc/5/HHCell/v" scale="1mV" color="#1d7a1c" timeScale="1ms"/>
+            <Line id="Exc 6: Vm" quantity="Exc/6/HHCell/v" scale="1mV" color="#9bbe17" timeScale="1ms"/>
+            <Line id="Exc 7: Vm" quantity="Exc/7/HHCell/v" scale="1mV" color="#b2df8f" timeScale="1ms"/>
+            <Line id="Exc 8: Vm" quantity="Exc/8/HHCell/v" scale="1mV" color="#2c40cf" timeScale="1ms"/>
+            <Line id="Exc 9: Vm" quantity="Exc/9/HHCell/v" scale="1mV" color="#42c6c3" timeScale="1ms"/>
+            <Line id="Exc 10: Vm" quantity="Exc/10/HHCell/v" scale="1mV" color="#329a1e" timeScale="1ms"/>
+            <Line id="Exc 11: Vm" quantity="Exc/11/HHCell/v" scale="1mV" color="#59a1cc" timeScale="1ms"/>
+            <Line id="Exc 12: Vm" quantity="Exc/12/HHCell/v" scale="1mV" color="#958498" timeScale="1ms"/>
+            <Line id="Exc 13: Vm" quantity="Exc/13/HHCell/v" scale="1mV" color="#673e5b" timeScale="1ms"/>
+            <Line id="Exc 14: Vm" quantity="Exc/14/HHCell/v" scale="1mV" color="#d1255b" timeScale="1ms"/>
+            <Line id="Exc 15: Vm" quantity="Exc/15/HHCell/v" scale="1mV" color="#db3d13" timeScale="1ms"/>
+            <Line id="Exc 16: Vm" quantity="Exc/16/HHCell/v" scale="1mV" color="#0fdfc2" timeScale="1ms"/>
+            <Line id="Exc 17: Vm" quantity="Exc/17/HHCell/v" scale="1mV" color="#1b1b77" timeScale="1ms"/>
+            <Line id="Exc 18: Vm" quantity="Exc/18/HHCell/v" scale="1mV" color="#016bb1" timeScale="1ms"/>
+            <Line id="Exc 19: Vm" quantity="Exc/19/HHCell/v" scale="1mV" color="#647746" timeScale="1ms"/>
+            <Line id="Exc 20: Vm" quantity="Exc/20/HHCell/v" scale="1mV" color="#ab5d6c" timeScale="1ms"/>
+            <Line id="Exc 21: Vm" quantity="Exc/21/HHCell/v" scale="1mV" color="#f3d93b" timeScale="1ms"/>
+            <Line id="Exc 22: Vm" quantity="Exc/22/HHCell/v" scale="1mV" color="#f7f9d6" timeScale="1ms"/>
+            <Line id="Exc 23: Vm" quantity="Exc/23/HHCell/v" scale="1mV" color="#4203c6" timeScale="1ms"/>
+            <Line id="Exc 24: Vm" quantity="Exc/24/HHCell/v" scale="1mV" color="#25f270" timeScale="1ms"/>
+            <Line id="Exc 25: Vm" quantity="Exc/25/HHCell/v" scale="1mV" color="#a5ca92" timeScale="1ms"/>
+            <Line id="Exc 26: Vm" quantity="Exc/26/HHCell/v" scale="1mV" color="#1d5ace" timeScale="1ms"/>
+            <Line id="Exc 27: Vm" quantity="Exc/27/HHCell/v" scale="1mV" color="#ef15d0" timeScale="1ms"/>
+            <Line id="Exc 28: Vm" quantity="Exc/28/HHCell/v" scale="1mV" color="#3eee18" timeScale="1ms"/>
+            <Line id="Exc 29: Vm" quantity="Exc/29/HHCell/v" scale="1mV" color="#d97af1" timeScale="1ms"/>
+            <Line id="Exc 30: Vm" quantity="Exc/30/HHCell/v" scale="1mV" color="#c404c3" timeScale="1ms"/>
+            <Line id="Exc 31: Vm" quantity="Exc/31/HHCell/v" scale="1mV" color="#22bb51" timeScale="1ms"/>
+            <Line id="Exc 32: Vm" quantity="Exc/32/HHCell/v" scale="1mV" color="#264ecb" timeScale="1ms"/>
+            <Line id="Exc 33: Vm" quantity="Exc/33/HHCell/v" scale="1mV" color="#94844d" timeScale="1ms"/>
+            <Line id="Exc 34: Vm" quantity="Exc/34/HHCell/v" scale="1mV" color="#2ccc51" timeScale="1ms"/>
+            <Line id="Exc 35: Vm" quantity="Exc/35/HHCell/v" scale="1mV" color="#f4b623" timeScale="1ms"/>
+            <Line id="Exc 36: Vm" quantity="Exc/36/HHCell/v" scale="1mV" color="#50c597" timeScale="1ms"/>
+            <Line id="Exc 37: Vm" quantity="Exc/37/HHCell/v" scale="1mV" color="#8fb2a2" timeScale="1ms"/>
+            <Line id="Exc 38: Vm" quantity="Exc/38/HHCell/v" scale="1mV" color="#93f843" timeScale="1ms"/>
+            <Line id="Exc 39: Vm" quantity="Exc/39/HHCell/v" scale="1mV" color="#8254b4" timeScale="1ms"/>
+            <Line id="Exc 40: Vm" quantity="Exc/40/HHCell/v" scale="1mV" color="#3257c6" timeScale="1ms"/>
+            <Line id="Exc 41: Vm" quantity="Exc/41/HHCell/v" scale="1mV" color="#d53482" timeScale="1ms"/>
+            <Line id="Exc 42: Vm" quantity="Exc/42/HHCell/v" scale="1mV" color="#169421" timeScale="1ms"/>
+            <Line id="Exc 43: Vm" quantity="Exc/43/HHCell/v" scale="1mV" color="#f20ff1" timeScale="1ms"/>
+            <Line id="Exc 44: Vm" quantity="Exc/44/HHCell/v" scale="1mV" color="#6c8210" timeScale="1ms"/>
+            <Line id="Exc 45: Vm" quantity="Exc/45/HHCell/v" scale="1mV" color="#077c54" timeScale="1ms"/>
+            <Line id="Exc 46: Vm" quantity="Exc/46/HHCell/v" scale="1mV" color="#f82d1b" timeScale="1ms"/>
+            <Line id="Exc 47: Vm" quantity="Exc/47/HHCell/v" scale="1mV" color="#acb191" timeScale="1ms"/>
+            <Line id="Exc 48: Vm" quantity="Exc/48/HHCell/v" scale="1mV" color="#082169" timeScale="1ms"/>
+            <Line id="Exc 49: Vm" quantity="Exc/49/HHCell/v" scale="1mV" color="#a2447d" timeScale="1ms"/>
         </Display>
         
         <Display id="display_inh" title="Voltages Inh cells" timeScale="1ms" xmin="-30.0" xmax="330.0" ymin="-80" ymax="50">
-            <Line id="Inh 0: Vm" quantity="Inh/0/HHCell/v" scale="1mV" color="#69bdc7" timeScale="1ms"/>
-            <Line id="Inh 1: Vm" quantity="Inh/1/HHCell/v" scale="1mV" color="#3fb6c2" timeScale="1ms"/>
-            <Line id="Inh 2: Vm" quantity="Inh/2/HHCell/v" scale="1mV" color="#e882f2" timeScale="1ms"/>
-            <Line id="Inh 3: Vm" quantity="Inh/3/HHCell/v" scale="1mV" color="#c81fb6" timeScale="1ms"/>
-            <Line id="Inh 4: Vm" quantity="Inh/4/HHCell/v" scale="1mV" color="#fb2cd5" timeScale="1ms"/>
-            <Line id="Inh 5: Vm" quantity="Inh/5/HHCell/v" scale="1mV" color="#8c3ffa" timeScale="1ms"/>
-            <Line id="Inh 6: Vm" quantity="Inh/6/HHCell/v" scale="1mV" color="#b4eda8" timeScale="1ms"/>
-            <Line id="Inh 7: Vm" quantity="Inh/7/HHCell/v" scale="1mV" color="#450437" timeScale="1ms"/>
-            <Line id="Inh 8: Vm" quantity="Inh/8/HHCell/v" scale="1mV" color="#771184" timeScale="1ms"/>
-            <Line id="Inh 9: Vm" quantity="Inh/9/HHCell/v" scale="1mV" color="#c42556" timeScale="1ms"/>
-            <Line id="Inh 10: Vm" quantity="Inh/10/HHCell/v" scale="1mV" color="#53f7c1" timeScale="1ms"/>
-            <Line id="Inh 11: Vm" quantity="Inh/11/HHCell/v" scale="1mV" color="#32951f" timeScale="1ms"/>
-            <Line id="Inh 12: Vm" quantity="Inh/12/HHCell/v" scale="1mV" color="#476940" timeScale="1ms"/>
-            <Line id="Inh 13: Vm" quantity="Inh/13/HHCell/v" scale="1mV" color="#ecec5e" timeScale="1ms"/>
-            <Line id="Inh 14: Vm" quantity="Inh/14/HHCell/v" scale="1mV" color="#77e3be" timeScale="1ms"/>
-            <Line id="Inh 15: Vm" quantity="Inh/15/HHCell/v" scale="1mV" color="#0170a5" timeScale="1ms"/>
-            <Line id="Inh 16: Vm" quantity="Inh/16/HHCell/v" scale="1mV" color="#758aa3" timeScale="1ms"/>
-            <Line id="Inh 17: Vm" quantity="Inh/17/HHCell/v" scale="1mV" color="#73f4a0" timeScale="1ms"/>
-            <Line id="Inh 18: Vm" quantity="Inh/18/HHCell/v" scale="1mV" color="#d8e780" timeScale="1ms"/>
-            <Line id="Inh 19: Vm" quantity="Inh/19/HHCell/v" scale="1mV" color="#fa144a" timeScale="1ms"/>
+            <Line id="Inh 0: Vm" quantity="Inh/0/HHCell/v" scale="1mV" color="#e90614" timeScale="1ms"/>
+            <Line id="Inh 1: Vm" quantity="Inh/1/HHCell/v" scale="1mV" color="#b81836" timeScale="1ms"/>
+            <Line id="Inh 2: Vm" quantity="Inh/2/HHCell/v" scale="1mV" color="#afcc5c" timeScale="1ms"/>
+            <Line id="Inh 3: Vm" quantity="Inh/3/HHCell/v" scale="1mV" color="#0ef171" timeScale="1ms"/>
+            <Line id="Inh 4: Vm" quantity="Inh/4/HHCell/v" scale="1mV" color="#1cab50" timeScale="1ms"/>
+            <Line id="Inh 5: Vm" quantity="Inh/5/HHCell/v" scale="1mV" color="#6e5941" timeScale="1ms"/>
+            <Line id="Inh 6: Vm" quantity="Inh/6/HHCell/v" scale="1mV" color="#177a02" timeScale="1ms"/>
+            <Line id="Inh 7: Vm" quantity="Inh/7/HHCell/v" scale="1mV" color="#fb22a7" timeScale="1ms"/>
+            <Line id="Inh 8: Vm" quantity="Inh/8/HHCell/v" scale="1mV" color="#d93d2b" timeScale="1ms"/>
+            <Line id="Inh 9: Vm" quantity="Inh/9/HHCell/v" scale="1mV" color="#59596d" timeScale="1ms"/>
+            <Line id="Inh 10: Vm" quantity="Inh/10/HHCell/v" scale="1mV" color="#9449e5" timeScale="1ms"/>
+            <Line id="Inh 11: Vm" quantity="Inh/11/HHCell/v" scale="1mV" color="#0a3be3" timeScale="1ms"/>
+            <Line id="Inh 12: Vm" quantity="Inh/12/HHCell/v" scale="1mV" color="#e1e260" timeScale="1ms"/>
+            <Line id="Inh 13: Vm" quantity="Inh/13/HHCell/v" scale="1mV" color="#fe765d" timeScale="1ms"/>
+            <Line id="Inh 14: Vm" quantity="Inh/14/HHCell/v" scale="1mV" color="#86ed67" timeScale="1ms"/>
+            <Line id="Inh 15: Vm" quantity="Inh/15/HHCell/v" scale="1mV" color="#6cf7ac" timeScale="1ms"/>
+            <Line id="Inh 16: Vm" quantity="Inh/16/HHCell/v" scale="1mV" color="#c4c832" timeScale="1ms"/>
+            <Line id="Inh 17: Vm" quantity="Inh/17/HHCell/v" scale="1mV" color="#b4be63" timeScale="1ms"/>
+            <Line id="Inh 18: Vm" quantity="Inh/18/HHCell/v" scale="1mV" color="#dca76e" timeScale="1ms"/>
+            <Line id="Inh 19: Vm" quantity="Inh/19/HHCell/v" scale="1mV" color="#a81f3c" timeScale="1ms"/>
         </Display>
         
         <OutputFile id="Volts_file_exc" fileName="v_exc.dat">
@@ -130,6 +140,16 @@
             <OutputColumn id="v_37" quantity="Exc/37/HHCell/v"/> 
             <OutputColumn id="v_38" quantity="Exc/38/HHCell/v"/> 
             <OutputColumn id="v_39" quantity="Exc/39/HHCell/v"/> 
+            <OutputColumn id="v_40" quantity="Exc/40/HHCell/v"/> 
+            <OutputColumn id="v_41" quantity="Exc/41/HHCell/v"/> 
+            <OutputColumn id="v_42" quantity="Exc/42/HHCell/v"/> 
+            <OutputColumn id="v_43" quantity="Exc/43/HHCell/v"/> 
+            <OutputColumn id="v_44" quantity="Exc/44/HHCell/v"/> 
+            <OutputColumn id="v_45" quantity="Exc/45/HHCell/v"/> 
+            <OutputColumn id="v_46" quantity="Exc/46/HHCell/v"/> 
+            <OutputColumn id="v_47" quantity="Exc/47/HHCell/v"/> 
+            <OutputColumn id="v_48" quantity="Exc/48/HHCell/v"/> 
+            <OutputColumn id="v_49" quantity="Exc/49/HHCell/v"/> 
         </OutputFile>
         
         <OutputFile id="Volts_file_inh" fileName="v_inh.dat">
