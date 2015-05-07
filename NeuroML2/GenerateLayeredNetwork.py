@@ -268,14 +268,14 @@ if __name__ == "__main__":
     
     
     generate_layered_network("LayeredCortexDemo",
-                                numCells_exc_per_layer = 10,
+                                numCells_exc_per_layer = 20,
                                 numCells_inh_per_layer = 0,
                                 num_layers = 10,
                                 exc_group_component = "HHCell",
                                 inh_group_component = "HHCell",
-                                x_size = 500,
+                                x_size = 400,
                                 layer_y_size = 100, 
-                                z_size = 500,
+                                z_size = 400,
                                 connections = False,
                                 connection_probability_exc_exc =   0.25,
                                 connection_probability_inh_exc =   0.7,
