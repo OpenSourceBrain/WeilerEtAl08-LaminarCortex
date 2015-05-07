@@ -267,7 +267,7 @@ if __name__ == "__main__":
                                 numCells_exc = 40,
                                 numCells_inh = 20,
                                 x_size = 100,
-                                y_size = 100, 
+                                y_size = 50, 
                                 z_size = 100,
                                 connections = True,
                                 connection_probability_exc_exc =   0.3,
