@@ -36,4 +36,6 @@ but fewer connections from a cell in lower layers:
 
 ![](https://raw.githubusercontent.com/OpenSourceBrain/WeilerEtAl08-LaminarCortex/master/NeuroML2/connB.jpg)
 
+This network has connetivity, but no spiking activity yet. [Another python script](https://github.com/OpenSourceBrain/WeilerEtAl08-LaminarCortex/blob/master/NeuroML2/GenerateNetwork.py) produces a [spiking network model](https://github.com/OpenSourceBrain/WeilerEtAl08-LaminarCortex/blob/master/NeuroML2/CortexDemoHH.net.nml) (which can be run with [jNeuroML](https://github.com/NeuroML/jNeuroML)). 
 
+The layered network will soon be updated with inputs and then propagation of inputs focussed on individual laminar layers to the rest of the network can be examined.
