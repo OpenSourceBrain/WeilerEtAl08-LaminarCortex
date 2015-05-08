@@ -20,4 +20,20 @@ A set of scripts has been created to enable generation of simple (integrate & fi
 
 See [GenerateLayeredNetwork.py](https://github.com/OpenSourceBrain/WeilerEtAl08-LaminarCortex/blob/master/NeuroML2/GenerateLayeredNetwork.py) for example, which uses [libNeuroML](https://github.com/NeuralEnsemble/libNeuroML) to generate [NeuroML 2](https://neuroml.org/neuromlv2) descriptions of the [populations & projections in the network](https://neuroml.org/NeuroML2CoreTypes/Networks.html). See generated example [here](https://github.com/OpenSourceBrain/WeilerEtAl08-LaminarCortex/blob/master/NeuroML2/LayeredCortexDemo.net.nml).
 
+The data used is the connectivity matrix from the above Python code (based on the original Matlab file). It's visualised below:
+
+![](https://raw.githubusercontent.com/OpenSourceBrain/WeilerEtAl08-LaminarCortex/master/Python/connectivity.png)
+
+The network can be visualised in OSB (see [here](http://opensourcebrain.org/projects/weileretal08-laminarcortex?explorer=https%3A%2F%2Fraw.githubusercontent.com%2FOpenSourceBrain%2FWeilerEtAl08-LaminarCortex%2Fmaster%2FNeuroML2%2FLayeredCortexDemo.net.nml))
+
+![](https://raw.githubusercontent.com/OpenSourceBrain/WeilerEtAl08-LaminarCortex/master/NeuroML2/connectivity.jpg)
+
+Clicking on individual cells highlights the connectivity of that cell, e.g. for cells in laminar layer 0 (top of column) there are many connections, particularly to layer 3:
+
+![](https://raw.githubusercontent.com/OpenSourceBrain/WeilerEtAl08-LaminarCortex/master/NeuroML2/connA.jpg)
+
+but fewer connections from a cell in lower layers:
+
+![](https://raw.githubusercontent.com/OpenSourceBrain/WeilerEtAl08-LaminarCortex/master/NeuroML2/connB.jpg)
+
 
