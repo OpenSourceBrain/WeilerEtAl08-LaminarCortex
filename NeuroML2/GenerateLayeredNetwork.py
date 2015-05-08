@@ -25,7 +25,7 @@ from random import seed
 
 import numpy
 
-
+#TODO: check why some of these values are negative??
 def getW(datasetname):
     if datasetname == 'mouse somatic M1':
         out = [
@@ -119,7 +119,7 @@ def generate_layered_network(network_id,
     
     for layer in range(num_layers):
 
-        y_offset = layer * layer_y_size
+        y_offset = -1 * layer * layer_y_size
         exc_pop = Population(id="%s_%i"%(exc_group, layer), component=exc_group_component, type="populationList", size=numCells_exc_per_layer)
         net.populations.append(exc_pop)
 
@@ -127,7 +127,7 @@ def generate_layered_network(network_id,
                 index = i
                 inst = Instance(id=index)
                 exc_pop.instances.append(inst)
-                inst.location = Location(x=str(x_size*random()), y=str(y_offset + layer_y_size*random()), z=str(z_size*random()))
+                inst.location = Location(x=str(x_size*random()), y=str(y_offset - layer_y_size*random()), z=str(z_size*random()))
 
         if numCells_inh_per_layer > 0:
             # Generate inhibitory cells
@@ -138,7 +138,7 @@ def generate_layered_network(network_id,
                     index = i
                     inst = Instance(id=index)
                     inh_pop.instances.append(inst)
-                    inst.location = Location(x=str(x_size*random()), y=str(y_offset + layer_y_size*random()), z=str(z_size*random()))
+                    inst.location = Location(x=str(x_size*random()), y=str(y_offset - layer_y_size*random()), z=str(z_size*random()))
 
     if connections:
         
