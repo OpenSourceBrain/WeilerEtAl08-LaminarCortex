@@ -110,66 +110,40 @@ def generate_layered_network(network_id,
                 exc_pop.instances.append(inst)
                 inst.location = Location(x=str(x_size*random()), y=str(y_offset + layer_y_size*random()), z=str(z_size*random()))
 
-        # Generate inhibitory cells
-        inh_pop = Population(id="%s_%i"%(inh_group, layer), component=inh_group_component, type="populationList", size=numCells_inh_per_layer)
-        net.populations.append(inh_pop)
+        if numCells_inh_per_layer > 0:
+            # Generate inhibitory cells
+            inh_pop = Population(id="%s_%i"%(inh_group, layer), component=inh_group_component, type="populationList", size=numCells_inh_per_layer)
+            net.populations.append(inh_pop)
 
-        for i in range(0, numCells_inh_per_layer) :
-                index = i
-                inst = Instance(id=index)
-                inh_pop.instances.append(inst)
-                inst.location = Location(x=str(x_size*random()), y=str(y_offset + layer_y_size*random()), z=str(z_size*random()))
+            for i in range(0, numCells_inh_per_layer):
+                    index = i
+                    inst = Instance(id=index)
+                    inh_pop.instances.append(inst)
+                    inst.location = Location(x=str(x_size*random()), y=str(y_offset + layer_y_size*random()), z=str(z_size*random()))
 
     if connections:
 
-        proj_exc_exc = Projection(id=net_conn_exc_exc, presynaptic_population=exc_group, postsynaptic_population=exc_group, synapse=exc_exc_syn)
-        net.projections.append(proj_exc_exc)
-        
-        proj_exc_inh = Projection(id=net_conn_exc_inh, presynaptic_population=exc_group, postsynaptic_population=inh_group, synapse=exc_inh_syn)
-        net.projections.append(proj_exc_inh)
-        
-        proj_inh_exc = Projection(id=net_conn_inh_exc, presynaptic_population=inh_group, postsynaptic_population=exc_group, synapse=inh_exc_syn)
-        net.projections.append(proj_inh_exc)
-        
-        proj_inh_inh = Projection(id=net_conn_inh_inh, presynaptic_population=inh_group, postsynaptic_population=inh_group, synapse=inh_inh_syn)
-        net.projections.append(proj_inh_inh)
+        for pre in range(num_layers):
+            for post in range(num_layers):
+                
+                id = "proj_%s_%s"%(pre, post)
+                pre_pop = "%s_%i"%(exc_group, pre)
+                post_pop = "%s_%i"%(exc_group, post)
+                proj = Projection(id=id, presynaptic_population=pre_pop, postsynaptic_population=post_pop, synapse=exc_exc_syn)
+                net.projections.append(proj)
 
-        count_exc_inh = 0
-        count_inh_exc = 0
-        count_exc_exc = 0
-        count_inh_inh = 0
+                count = 0
+
+                for i in range(0, numCells_exc_per_layer):
+                    for j in range(0, numCells_exc_per_layer):
+                        if i != j:
+
+                            if random()<connection_probability_exc_exc:
+
+                                add_connection(proj, count, pre_pop, exc_group_component, i, 0, post_pop, exc_group_component, j, 0)
+                                count+=1
 
 
-        for i in range(0, numCells_exc_per_layer):
-            for j in range(0, numCells_inh_per_layer):
-                if i != j:
-                    if random()<connection_probability_exc_inh:
-                        add_connection(proj_exc_inh, count_exc_inh, exc_group, exc_group_component, i, 0, inh_group, inh_group_component, j, 0)
-                        count_exc_inh+=1
-                        
-                    if random()<connection_probability_inh_exc:
-
-                        add_connection(proj_inh_exc, count_inh_exc, inh_group, inh_group_component, j, 0, exc_group, exc_group_component, i, 0)
-                        count_inh_exc+=1
-                        
-        for i in range(0, numCells_exc_per_layer):
-            for j in range(0, numCells_exc_per_layer):
-                if i != j:
-                        
-                    if random()<connection_probability_exc_exc:
-
-                        add_connection(proj_exc_exc, count_exc_exc, exc_group, exc_group_component, i, 0, exc_group, exc_group_component, j, 0)
-                        count_exc_exc+=1
-                    
-
-        for i in range(0, numCells_inh_per_layer):
-            for j in range(0, numCells_inh_per_layer):
-                if i != j:
-
-                    if random()<connection_probability_inh_inh:
-
-                        add_connection(proj_inh_inh, count_inh_inh, inh_group, inh_group_component, j, 0, inh_group, inh_group_component, i, 0)
-                        count_inh_inh+=1
 
     if inputs:
         
@@ -268,7 +242,7 @@ if __name__ == "__main__":
     
     
     generate_layered_network("LayeredCortexDemo",
-                                numCells_exc_per_layer = 20,
+                                numCells_exc_per_layer = 10,
                                 numCells_inh_per_layer = 0,
                                 num_layers = 10,
                                 exc_group_component = "HHCell",
@@ -276,8 +250,8 @@ if __name__ == "__main__":
                                 x_size = 400,
                                 layer_y_size = 100, 
                                 z_size = 400,
-                                connections = False,
-                                connection_probability_exc_exc =   0.25,
+                                connections = True,
+                                connection_probability_exc_exc =   0.4,
                                 connection_probability_inh_exc =   0.7,
                                 connection_probability_exc_inh =   0.7,
                                 connection_probability_inh_inh =   0.1,
