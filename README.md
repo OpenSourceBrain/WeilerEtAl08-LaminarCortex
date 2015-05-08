@@ -12,3 +12,12 @@ This can be run with (after installing Numpy):
     python laminarWsimulation.py
 
 ![Python impl](https://raw.githubusercontent.com/OpenSourceBrain/WeilerEtAl08-LaminarCortex/master/Python/weiler.png)
+
+
+### NeuroML implementation
+
+A set of scripts has been created to enable generation of simple (integrate & fire or single compartment HH cell model) cortical networks using this connectivity data.
+
+See [GenerateLayeredNetwork.py](https://github.com/OpenSourceBrain/WeilerEtAl08-LaminarCortex/blob/master/NeuroML2/GenerateLayeredNetwork.py) for example, which uses [libNeuroML](https://github.com/NeuralEnsemble/libNeuroML) to generate [NeuroML 2](https://neuroml.org/neuromlv2) descriptions of the [populations & projections in the network](https://neuroml.org/NeuroML2CoreTypes/Networks.html). See generated example [here](https://github.com/OpenSourceBrain/WeilerEtAl08-LaminarCortex/blob/master/NeuroML2/LayeredCortexDemo.net.nml).
+
+
