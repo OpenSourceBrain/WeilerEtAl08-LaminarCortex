@@ -52,8 +52,8 @@ def laminarWsimulation(gain = 1, W = None, inputvector = None, iterations = 10):
 
     
     pylab.figure()
-    pylab.xlabel('Pre?')
-    pylab.ylabel('Post?')
+    pylab.xlabel('Post')
+    pylab.ylabel('Pre')
     pylab.title('Connectivity matrix')
     pylab.imshow(W, interpolation='none')
     pylab.colorbar()
