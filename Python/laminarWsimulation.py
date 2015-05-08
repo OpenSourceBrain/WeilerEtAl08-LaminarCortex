@@ -50,14 +50,14 @@ def laminarWsimulation(gain = 1, W = None, inputvector = None, iterations = 10):
         
         
 
-    '''
+    
     pylab.figure()
     pylab.xlabel('Pre?')
     pylab.ylabel('Post?')
     pylab.title('Connectivity matrix')
     pylab.imshow(W, interpolation='none')
     pylab.colorbar()
-    '''
+    
     pylab.figure()
     pylab.xlabel('Iteration (number)')
     pylab.ylabel('Laminar level (cortical depth)')

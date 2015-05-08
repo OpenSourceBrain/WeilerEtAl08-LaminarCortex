@@ -266,7 +266,7 @@ if __name__ == "__main__":
     
     
     generate_layered_network("LayeredCortexDemo",
-                                numCells_exc_per_layer = 10,
+                                numCells_exc_per_layer = 20,
                                 numCells_inh_per_layer = 0,
                                 num_layers = 9,
                                 exc_group_component = "HHCell",
