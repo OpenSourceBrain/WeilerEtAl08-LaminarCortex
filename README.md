@@ -40,4 +40,4 @@ This network has connetivity, but no spiking activity yet. [Another python scrip
 
 The layered network will soon be updated with inputs and then propagation of inputs focussed on individual laminar layers to the rest of the network can be examined.
 
-more testing
+more testing2
