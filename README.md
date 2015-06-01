@@ -13,6 +13,8 @@ This can be run with (after installing Numpy):
 
 ![Python impl](https://raw.githubusercontent.com/OpenSourceBrain/WeilerEtAl08-LaminarCortex/master/Python/weiler.png)
 
+The y axis bins 0-8 represent **normalised cortical depth** (yfract). Bin 0 represents a normalized cortical depth between 0.1 and 0.2; bin 1 between 0.2 and 0.3; and so on. Each bin represents ~140um of cortical depth, and does not correspond to classical layer boundaries.
+
 
 ### NeuroML implementation
 
@@ -20,7 +22,7 @@ A set of scripts has been created to enable generation of simple (integrate & fi
 
 See [GenerateLayeredNetwork.py](https://github.com/OpenSourceBrain/WeilerEtAl08-LaminarCortex/blob/master/NeuroML2/GenerateLayeredNetwork.py) for example, which uses [libNeuroML](https://github.com/NeuralEnsemble/libNeuroML) to generate [NeuroML 2](https://neuroml.org/neuromlv2) descriptions of the [populations & projections in the network](https://neuroml.org/NeuroML2CoreTypes/Networks.html). See generated example [here](https://github.com/OpenSourceBrain/WeilerEtAl08-LaminarCortex/blob/master/NeuroML2/LayeredCortexDemo.net.nml).
 
-The data used is the connectivity matrix from the above Python code (based on the original Matlab file). It's visualised below:
+The data used is the connectivity matrix from the above Python code (based on the original Matlab file). It is visualised below:
 
 ![](https://raw.githubusercontent.com/OpenSourceBrain/WeilerEtAl08-LaminarCortex/master/Python/connectivity.png)
 
@@ -28,11 +30,11 @@ The network can be visualised in OSB (see [here](http://opensourcebrain.org/proj
 
 ![](https://raw.githubusercontent.com/OpenSourceBrain/WeilerEtAl08-LaminarCortex/master/NeuroML2/connectivity.jpg)
 
-Clicking on individual cells highlights the connectivity of that cell, e.g. for cells in laminar layer 0 (top of column) there are many connections, particularly to layer 3:
+Clicking on individual cells highlights the connectivity of that cell, e.g. for cells in bin 0 (top of column) there are many connections, particularly to cells in bin 3:
 
 ![](https://raw.githubusercontent.com/OpenSourceBrain/WeilerEtAl08-LaminarCortex/master/NeuroML2/connA.jpg)
 
-but fewer connections from a cell in lower layers:
+but fewer connections from a cell in lower bins:
 
 ![](https://raw.githubusercontent.com/OpenSourceBrain/WeilerEtAl08-LaminarCortex/master/NeuroML2/connB.jpg)
 
