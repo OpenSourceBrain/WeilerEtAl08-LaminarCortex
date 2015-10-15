@@ -53,7 +53,6 @@
     <pulseGenerator id="PulseGenerator_48" delay="0ms" duration="400ms" amplitude="0.012704nA"/>
     <pulseGenerator id="PulseGenerator_49" delay="0ms" duration="400ms" amplitude="0.253543nA"/>
     <network id="CortexDemoHH" type="networkWithTemperature" temperature="32.0 degC">
-        <notes>Network generated using libNeuroML v0.2.10</notes>
         <population id="Exc" type="populationList" component="HHCell" size="50">
             <instance id="0">
                 <location y="44.073259917500003" x="193.290707137999988" z="1.49829401172"/>
