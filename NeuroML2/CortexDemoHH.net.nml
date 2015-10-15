@@ -4,8 +4,8 @@
     <include href="GABAA.synapse.nml"></include>
     <poissonFiringSynapse id="input_70Hz" synapse="AMPAR" averageRate="70 per_s" spikeTarget="./AMPAR"/>
     <network id="CortexDemoHH" type="networkWithTemperature" temperature="32.0 degC">
-        <notes>Network generated using libNeuroML v0.2.6</notes>
-        <population id="Exc" component="HHCell" type="populationList" size="50">
+        <notes>Network generated using libNeuroML v0.2.10</notes>
+        <population id="Exc" type="populationList" component="HHCell" size="50">
             <instance id="0">
                 <location y="44.073259917500003" x="193.290707137999988" z="1.49829401172"/>
             </instance>
@@ -157,7 +157,7 @@
                 <location y="53.748772019" x="192.004932880000013" z="184.213471865999992"/>
             </instance>
         </population>
-        <population id="Inh" component="HHCell" type="populationList" size="20">
+        <population id="Inh" type="populationList" component="HHCell" size="20">
             <instance id="0">
                 <location y="68.5270090235" x="84.407373247999999" z="169.381769227000007"/>
             </instance>

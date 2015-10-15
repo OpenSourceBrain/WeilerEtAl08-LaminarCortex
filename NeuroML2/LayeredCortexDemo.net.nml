@@ -3,8 +3,8 @@
     <include href="AMPAR.synapse.nml"></include>
     <include href="GABAA.synapse.nml"></include>
     <network id="LayeredCortexDemo" type="networkWithTemperature" temperature="32.0 degC">
-        <notes>Network generated using libNeuroML v0.2.6</notes>
-        <population id="Exc_0" component="HHCell" type="populationList" size="20">
+        <notes>Network generated using libNeuroML v0.2.10</notes>
+        <population id="Exc_0" type="populationList" component="HHCell" size="20">
             <instance id="0">
                 <location y="-44.073259917500003" x="386.581414277000022" z="2.99658802343"/>
             </instance>
@@ -66,7 +66,7 @@
                 <location y="-15.455140008900001" x="381.887462281000012" z="333.555717660000028"/>
             </instance>
         </population>
-        <population id="Exc_1" component="HHCell" type="populationList" size="20">
+        <population id="Exc_1" type="populationList" component="HHCell" size="20">
             <instance id="0">
                 <location y="-138.618352834000007" x="16.425122508699999" z="139.83692078499999"/>
             </instance>
@@ -128,7 +128,7 @@
                 <location y="-151.503417559000013" x="343.474469199999987" z="280.966190759000028"/>
             </instance>
         </population>
-        <population id="Exc_2" component="HHCell" type="populationList" size="20">
+        <population id="Exc_2" type="populationList" component="HHCell" size="20">
             <instance id="0">
                 <location y="-258.451181056999985" x="69.875967361199997" z="120.710823120000001"/>
             </instance>
@@ -190,7 +190,7 @@
                 <location y="-236.952543746999993" x="112.504162167000004" z="240.197498639000003"/>
             </instance>
         </population>
-        <population id="Exc_3" component="HHCell" type="populationList" size="20">
+        <population id="Exc_3" type="populationList" component="HHCell" size="20">
             <instance id="0">
                 <location y="-351.88643261499999" x="82.427192237900002" z="371.869074011000009"/>
             </instance>
@@ -252,7 +252,7 @@
                 <location y="-333.109137313000019" x="273.100568608000003" z="225.671932786000013"/>
             </instance>
         </population>
-        <population id="Exc_4" component="HHCell" type="populationList" size="20">
+        <population id="Exc_4" type="populationList" component="HHCell" size="20">
             <instance id="0">
                 <location y="-449.941602859999989" x="65.013717049299999" z="376.019229519000021"/>
             </instance>
@@ -314,7 +314,7 @@
                 <location y="-465.124640422000027" x="364.072839185000021" z="19.803726489799999"/>
             </instance>
         </population>
-        <population id="Exc_5" component="HHCell" type="populationList" size="20">
+        <population id="Exc_5" type="populationList" component="HHCell" size="20">
             <instance id="0">
                 <location y="-546.804772587000002" x="365.595268010999973" z="239.103894617999998"/>
             </instance>
@@ -376,7 +376,7 @@
                 <location y="-554.804857710999954" x="141.990835683" z="75.338681356699993"/>
             </instance>
         </population>
-        <population id="Exc_6" component="HHCell" type="populationList" size="20">
+        <population id="Exc_6" type="populationList" component="HHCell" size="20">
             <instance id="0">
                 <location y="-693.113402780000001" x="189.169787393999997" z="371.608628230000022"/>
             </instance>
@@ -438,7 +438,7 @@
                 <location y="-643.00975942499997" x="217.540011424999989" z="177.707642389"/>
             </instance>
         </population>
-        <population id="Exc_7" component="HHCell" type="populationList" size="20">
+        <population id="Exc_7" type="populationList" component="HHCell" size="20">
             <instance id="0">
                 <location y="-777.990503661000048" x="219.951457989999994" z="287.280985369000007"/>
             </instance>
@@ -500,7 +500,7 @@
                 <location y="-755.336036544999956" x="89.458965786899995" z="7.06249438888"/>
             </instance>
         </population>
-        <population id="Exc_8" component="HHCell" type="populationList" size="20">
+        <population id="Exc_8" type="populationList" component="HHCell" size="20">
             <instance id="0">
                 <location y="-844.026777324000022" x="145.268403936999988" z="272.999572048000005"/>
             </instance>
