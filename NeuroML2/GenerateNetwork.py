@@ -12,6 +12,7 @@ from neuroml import IncludeType
 from neuroml import InputList
 from neuroml import Input
 from neuroml import PoissonFiringSynapse
+from neuroml import PulseGenerator
 
 from neuroml import __version__
 
@@ -56,6 +57,8 @@ def generate_example_network(network_id,
                              connection_probability_inh_inh =   0.4,
                              inputs = False,
                              input_firing_rate = 50, # Hz
+                             input_offset_min = 0, # nA
+                             input_offset_max = 0, # nA
                              num_inputs_per_exc = 4,
                              duration = 500,  # ms
                              dt = 0.05,
@@ -169,35 +172,60 @@ def generate_example_network(network_id,
 
     if inputs:
         
-        mf_input_syn = "AMPAR"
-        if mf_input_syn!=exc_inh_syn and mf_input_syn!=inh_exc_syn:
-            nml_doc.includes.append(IncludeType(href='%s.synapse.nml'%mf_input_syn))
         
-        rand_spiker_id = "input_%sHz"%input_firing_rate
-        
-        pfs = PoissonFiringSynapse(id=rand_spiker_id,
-                                   average_rate="%s per_s"%input_firing_rate,
-                                   synapse=mf_input_syn,
-                                   spike_target="./%s"%mf_input_syn)
-                                   
-        nml_doc.poisson_firing_synapses.append(pfs)
-        
-        input_list = InputList(id="Input_0",
-                             component=rand_spiker_id,
-                             populations=exc_group)
-                             
-        count = 0
-        for i in range(0, numCells_exc):
+        if input_firing_rate>0:
+            mf_input_syn = "AMPAR"
+            if mf_input_syn!=exc_inh_syn and mf_input_syn!=inh_exc_syn:
+                nml_doc.includes.append(IncludeType(href='%s.synapse.nml'%mf_input_syn))
+
+            rand_spiker_id = "input_%sHz"%input_firing_rate
             
-            for j in range(num_inputs_per_exc):
-                input = Input(id=count, 
+            pfs = PoissonFiringSynapse(id=rand_spiker_id,
+                                       average_rate="%s per_s"%input_firing_rate,
+                                       synapse=mf_input_syn,
+                                       spike_target="./%s"%mf_input_syn)
+
+            nml_doc.poisson_firing_synapses.append(pfs)
+
+            input_list = InputList(id="Input_0",
+                                 component=rand_spiker_id,
+                                 populations=exc_group)
+
+            count = 0
+            for i in range(0, numCells_exc):
+
+                for j in range(num_inputs_per_exc):
+                    input = Input(id=count, 
+                                  target="../%s/%i/%s"%(exc_group, i, exc_group_component), 
+                                  destination="synapses")  
+                    input_list.input.append(input)
+
+                count += 1
+
+            net.input_lists.append(input_list)
+            
+        if input_offset_max != 0 or input_offset_min != 0:
+            
+
+            for i in range(0, numCells_exc):
+
+                pg = PulseGenerator(id="PulseGenerator_%i"%i,
+                                    delay="0ms",
+                                    duration="%sms"%duration,
+                                    amplitude="%fnA"%(input_offset_min+(input_offset_max-input_offset_min)*random()))
+                nml_doc.pulse_generators.append(pg)
+
+                input_list = InputList(id="Input_Pulse_List_%i"%i,
+                                     component=pg.id,
+                                     populations=exc_group)
+
+                input = Input(id=0, 
                               target="../%s/%i/%s"%(exc_group, i, exc_group_component), 
                               destination="synapses")  
                 input_list.input.append(input)
-            
-            count += 1
-                             
-        net.input_lists.append(input_list)
+
+
+                net.input_lists.append(input_list)
 
 
     #######   Write to file  ######    
@@ -274,13 +302,15 @@ if __name__ == "__main__":
                                 connections = True,
                                 connection_probability_exc_exc =   0.25,
                                 connection_probability_inh_exc =   0.7,
-                                connection_probability_exc_inh =   0.7,
+                                connection_probability_exc_inh =   0.3,
                                 connection_probability_inh_inh =   0.1,
                                 inputs = True,
-                                input_firing_rate = 70, # Hz
-                                num_inputs_per_exc = 2,
+                                input_firing_rate = 0, # Hz
+                                input_offset_min = 0, # nA
+                                input_offset_max = 0.4, # nA
+                                num_inputs_per_exc = 1,
                                 generate_lems_simulation = True,
-                                duration = 300 )
+                                duration = 400 )
                                 
 
 
