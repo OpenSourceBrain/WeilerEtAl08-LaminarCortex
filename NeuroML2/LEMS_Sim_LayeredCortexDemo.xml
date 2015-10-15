@@ -2,7 +2,7 @@
     
     <!-- 
 
-        This LEMS file has been automatically generated using PyNeuroML v0.0.6
+        This LEMS file has been automatically generated using PyNeuroML v0.1.5 (libNeuroML v0.2.10)
 
      -->
     
@@ -24,52 +24,52 @@
     <Simulation id="Sim_LayeredCortexDemo" length="300ms" step="0.05ms" target="LayeredCortexDemo">
         
         <Display id="display_exc" title="Voltages Exc cells" timeScale="1ms" xmin="-30.0" xmax="330.0" ymin="-80" ymax="50">
-            <Line id="Exc 0: Vm" quantity="Exc/0/HHCell/v" scale="1mV" color="#8c602b" timeScale="1ms"/>
-            <Line id="Exc 1: Vm" quantity="Exc/1/HHCell/v" scale="1mV" color="#b67640" timeScale="1ms"/>
-            <Line id="Exc 2: Vm" quantity="Exc/2/HHCell/v" scale="1mV" color="#59a5e0" timeScale="1ms"/>
-            <Line id="Exc 3: Vm" quantity="Exc/3/HHCell/v" scale="1mV" color="#af544a" timeScale="1ms"/>
-            <Line id="Exc 4: Vm" quantity="Exc/4/HHCell/v" scale="1mV" color="#7fa149" timeScale="1ms"/>
-            <Line id="Exc 5: Vm" quantity="Exc/5/HHCell/v" scale="1mV" color="#423edf" timeScale="1ms"/>
-            <Line id="Exc 6: Vm" quantity="Exc/6/HHCell/v" scale="1mV" color="#24c74c" timeScale="1ms"/>
-            <Line id="Exc 7: Vm" quantity="Exc/7/HHCell/v" scale="1mV" color="#d541d1" timeScale="1ms"/>
-            <Line id="Exc 8: Vm" quantity="Exc/8/HHCell/v" scale="1mV" color="#f98f0d" timeScale="1ms"/>
-            <Line id="Exc 9: Vm" quantity="Exc/9/HHCell/v" scale="1mV" color="#2875f9" timeScale="1ms"/>
-            <Line id="Exc 10: Vm" quantity="Exc/10/HHCell/v" scale="1mV" color="#59e13e" timeScale="1ms"/>
-            <Line id="Exc 11: Vm" quantity="Exc/11/HHCell/v" scale="1mV" color="#74e55e" timeScale="1ms"/>
-            <Line id="Exc 12: Vm" quantity="Exc/12/HHCell/v" scale="1mV" color="#c79813" timeScale="1ms"/>
-            <Line id="Exc 13: Vm" quantity="Exc/13/HHCell/v" scale="1mV" color="#bbf544" timeScale="1ms"/>
-            <Line id="Exc 14: Vm" quantity="Exc/14/HHCell/v" scale="1mV" color="#d5980f" timeScale="1ms"/>
-            <Line id="Exc 15: Vm" quantity="Exc/15/HHCell/v" scale="1mV" color="#bf12a9" timeScale="1ms"/>
-            <Line id="Exc 16: Vm" quantity="Exc/16/HHCell/v" scale="1mV" color="#52a434" timeScale="1ms"/>
-            <Line id="Exc 17: Vm" quantity="Exc/17/HHCell/v" scale="1mV" color="#168aad" timeScale="1ms"/>
-            <Line id="Exc 18: Vm" quantity="Exc/18/HHCell/v" scale="1mV" color="#4c6206" timeScale="1ms"/>
-            <Line id="Exc 19: Vm" quantity="Exc/19/HHCell/v" scale="1mV" color="#381a1c" timeScale="1ms"/>
+            <Line id="Exc 0: Vm" quantity="Exc_0/0/HHCell/v" scale="1mV" color="#8c602b" timeScale="1ms"/>
+            <Line id="Exc 1: Vm" quantity="Exc_0/1/HHCell/v" scale="1mV" color="#b67640" timeScale="1ms"/>
+            <Line id="Exc 2: Vm" quantity="Exc_0/2/HHCell/v" scale="1mV" color="#59a5e0" timeScale="1ms"/>
+            <Line id="Exc 3: Vm" quantity="Exc_0/3/HHCell/v" scale="1mV" color="#af544a" timeScale="1ms"/>
+            <Line id="Exc 4: Vm" quantity="Exc_0/4/HHCell/v" scale="1mV" color="#7fa149" timeScale="1ms"/>
+            <Line id="Exc 5: Vm" quantity="Exc_0/5/HHCell/v" scale="1mV" color="#423edf" timeScale="1ms"/>
+            <Line id="Exc 6: Vm" quantity="Exc_0/6/HHCell/v" scale="1mV" color="#24c74c" timeScale="1ms"/>
+            <Line id="Exc 7: Vm" quantity="Exc_0/7/HHCell/v" scale="1mV" color="#d541d1" timeScale="1ms"/>
+            <Line id="Exc 8: Vm" quantity="Exc_0/8/HHCell/v" scale="1mV" color="#f98f0d" timeScale="1ms"/>
+            <Line id="Exc 9: Vm" quantity="Exc_0/9/HHCell/v" scale="1mV" color="#2875f9" timeScale="1ms"/>
+            <Line id="Exc 10: Vm" quantity="Exc_0/10/HHCell/v" scale="1mV" color="#59e13e" timeScale="1ms"/>
+            <Line id="Exc 11: Vm" quantity="Exc_0/11/HHCell/v" scale="1mV" color="#74e55e" timeScale="1ms"/>
+            <Line id="Exc 12: Vm" quantity="Exc_0/12/HHCell/v" scale="1mV" color="#c79813" timeScale="1ms"/>
+            <Line id="Exc 13: Vm" quantity="Exc_0/13/HHCell/v" scale="1mV" color="#bbf544" timeScale="1ms"/>
+            <Line id="Exc 14: Vm" quantity="Exc_0/14/HHCell/v" scale="1mV" color="#d5980f" timeScale="1ms"/>
+            <Line id="Exc 15: Vm" quantity="Exc_0/15/HHCell/v" scale="1mV" color="#bf12a9" timeScale="1ms"/>
+            <Line id="Exc 16: Vm" quantity="Exc_0/16/HHCell/v" scale="1mV" color="#52a434" timeScale="1ms"/>
+            <Line id="Exc 17: Vm" quantity="Exc_0/17/HHCell/v" scale="1mV" color="#168aad" timeScale="1ms"/>
+            <Line id="Exc 18: Vm" quantity="Exc_0/18/HHCell/v" scale="1mV" color="#4c6206" timeScale="1ms"/>
+            <Line id="Exc 19: Vm" quantity="Exc_0/19/HHCell/v" scale="1mV" color="#381a1c" timeScale="1ms"/>
         </Display>
         
         <Display id="display_inh" title="Voltages Inh cells" timeScale="1ms" xmin="-30.0" xmax="330.0" ymin="-80" ymax="50">
         </Display>
         
         <OutputFile id="Volts_file_exc" fileName="v_exc.dat">
-            <OutputColumn id="v_0" quantity="Exc/0/HHCell/v"/> 
-            <OutputColumn id="v_1" quantity="Exc/1/HHCell/v"/> 
-            <OutputColumn id="v_2" quantity="Exc/2/HHCell/v"/> 
-            <OutputColumn id="v_3" quantity="Exc/3/HHCell/v"/> 
-            <OutputColumn id="v_4" quantity="Exc/4/HHCell/v"/> 
-            <OutputColumn id="v_5" quantity="Exc/5/HHCell/v"/> 
-            <OutputColumn id="v_6" quantity="Exc/6/HHCell/v"/> 
-            <OutputColumn id="v_7" quantity="Exc/7/HHCell/v"/> 
-            <OutputColumn id="v_8" quantity="Exc/8/HHCell/v"/> 
-            <OutputColumn id="v_9" quantity="Exc/9/HHCell/v"/> 
-            <OutputColumn id="v_10" quantity="Exc/10/HHCell/v"/> 
-            <OutputColumn id="v_11" quantity="Exc/11/HHCell/v"/> 
-            <OutputColumn id="v_12" quantity="Exc/12/HHCell/v"/> 
-            <OutputColumn id="v_13" quantity="Exc/13/HHCell/v"/> 
-            <OutputColumn id="v_14" quantity="Exc/14/HHCell/v"/> 
-            <OutputColumn id="v_15" quantity="Exc/15/HHCell/v"/> 
-            <OutputColumn id="v_16" quantity="Exc/16/HHCell/v"/> 
-            <OutputColumn id="v_17" quantity="Exc/17/HHCell/v"/> 
-            <OutputColumn id="v_18" quantity="Exc/18/HHCell/v"/> 
-            <OutputColumn id="v_19" quantity="Exc/19/HHCell/v"/> 
+            <OutputColumn id="v_0" quantity="Exc_0/0/HHCell/v"/> 
+            <OutputColumn id="v_1" quantity="Exc_0/1/HHCell/v"/> 
+            <OutputColumn id="v_2" quantity="Exc_0/2/HHCell/v"/> 
+            <OutputColumn id="v_3" quantity="Exc_0/3/HHCell/v"/> 
+            <OutputColumn id="v_4" quantity="Exc_0/4/HHCell/v"/> 
+            <OutputColumn id="v_5" quantity="Exc_0/5/HHCell/v"/> 
+            <OutputColumn id="v_6" quantity="Exc_0/6/HHCell/v"/> 
+            <OutputColumn id="v_7" quantity="Exc_0/7/HHCell/v"/> 
+            <OutputColumn id="v_8" quantity="Exc_0/8/HHCell/v"/> 
+            <OutputColumn id="v_9" quantity="Exc_0/9/HHCell/v"/> 
+            <OutputColumn id="v_10" quantity="Exc_0/10/HHCell/v"/> 
+            <OutputColumn id="v_11" quantity="Exc_0/11/HHCell/v"/> 
+            <OutputColumn id="v_12" quantity="Exc_0/12/HHCell/v"/> 
+            <OutputColumn id="v_13" quantity="Exc_0/13/HHCell/v"/> 
+            <OutputColumn id="v_14" quantity="Exc_0/14/HHCell/v"/> 
+            <OutputColumn id="v_15" quantity="Exc_0/15/HHCell/v"/> 
+            <OutputColumn id="v_16" quantity="Exc_0/16/HHCell/v"/> 
+            <OutputColumn id="v_17" quantity="Exc_0/17/HHCell/v"/> 
+            <OutputColumn id="v_18" quantity="Exc_0/18/HHCell/v"/> 
+            <OutputColumn id="v_19" quantity="Exc_0/19/HHCell/v"/> 
         </OutputFile>
         
         <OutputFile id="Volts_file_inh" fileName="v_inh.dat">

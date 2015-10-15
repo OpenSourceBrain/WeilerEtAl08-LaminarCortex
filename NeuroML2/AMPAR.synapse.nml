@@ -6,7 +6,7 @@
 
     <notes>NeuroML 2 file describing a synaptic mechanism</notes>
 
-    <expTwoSynapse id="AMPAR" tauRise="1ms" tauDecay="10ms" gbase="1nS" erev="0V">
+    <expTwoSynapse id="AMPAR" tauRise="1ms" tauDecay="10ms" gbase="0.5nS" erev="0V">
 
         <notes>Simple AMPA-R synaptic mechanism</notes>
         
