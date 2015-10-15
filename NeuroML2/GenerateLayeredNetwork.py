@@ -246,12 +246,12 @@ def generate_layered_network(network_id,
         ls.create_output_file(of_inh, "v_inh.dat")
 
         for i in range(numCells_exc_per_layer):
-            quantity = "%s/%i/%s/v"%(exc_group, i, exc_group_component)
+            quantity = "%s_0/%i/%s/v"%(exc_group, i, exc_group_component)
             ls.add_line_to_display(disp_exc, "Exc %i: Vm"%i, quantity, "1mV", pynml.get_next_hex_color())
             ls.add_column_to_output_file(of_exc, "v_%i"%i, quantity)
             
         for i in range(numCells_inh_per_layer):
-            quantity = "%s/%i/%s/v"%(inh_group, i, inh_group_component)
+            quantity = "%s_0/%i/%s/v"%(inh_group, i, inh_group_component)
             ls.add_line_to_display(disp_inh, "Inh %i: Vm"%i, quantity, "1mV", pynml.get_next_hex_color())
             ls.add_column_to_output_file(of_inh, "v_%i"%i, quantity)
 
@@ -282,7 +282,7 @@ if __name__ == "__main__":
                                 inputs = False,
                                 input_firing_rate = 70, # Hz
                                 num_inputs_per_exc = 2,
-                                generate_lems_simulation = False,
+                                generate_lems_simulation = True,
                                 duration = 300 )
                                 
 
