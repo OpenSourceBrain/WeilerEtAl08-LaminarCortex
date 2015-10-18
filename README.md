@@ -5,7 +5,7 @@ excitatory network in motor cortex](http://www.nature.com/neuro/journal/v11/n3/f
 
 ### Python implementation
 
-So far a version of the [original model file in MATLAB](http://senselab.med.yale.edu/ModelDB/ShowModel.cshtml?model=114655&file=\laminarWsimulation\laminarWsimulation.m) has been [converted to Python](https://github.com/OpenSourceBrain/WeilerEtAl08-LaminarCortex/blob/master/Python/laminarWsimulation.py), 
+So far a version of the [original model file in MATLAB](http://senselab.med.yale.edu/ModelDB/showmodel.cshtml?model=114655) has been [converted to Python](https://github.com/OpenSourceBrain/WeilerEtAl08-LaminarCortex/blob/master/Python/laminarWsimulation.py), 
 for ease of integration with other Python scripts being developed to use the data from the Weiler et al., 2008 paper.
 
 This can be run with (after installing Numpy):
