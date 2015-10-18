@@ -6,9 +6,9 @@
 
     <notes>NeuroML 2 file describing a synaptic mechanism (It is a copy of the GABAA, needs to be updated)</notes>
 
-    <expTwoSynapse id="GABAA" tauRise="3.1E-4s" tauDecay="0.0088333s" gbase="1nS" erev="-0.07V">
+    <expTwoSynapse id="GABAB" tauRise="3.1E-4s" tauDecay="0.0088333s" gbase="1nS" erev="-0.07V">
 
-        <notes>GABA A synaptic mechanism</notes>
+        <notes>GABA B synaptic mechanism</notes>
         
     </expTwoSynapse>
 
