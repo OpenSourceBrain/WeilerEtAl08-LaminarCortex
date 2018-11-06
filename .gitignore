@@ -17,3 +17,4 @@ NeuroML2/*.hoc
 NeuroML2/*.dat
 NeuroML2/*nrn.py
 NeuroML2/*geppetto.*
+*.gv
